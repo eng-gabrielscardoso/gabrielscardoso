@@ -16,13 +16,11 @@
     @vite('resources/css/app.css')
 
     {{-- title --}}
-    <title>Gabriel Santos Cardoso | Software Solutions</title>
+    <title>{{ "$title | Gabriel Santos Cardoso" ?? 'Gabriel Santos Cardoso | Software Solutions' }}</title>
 </head>
 
 <body>
-    <main class="bg-slate-800 h-full min-h-screen w-full flex justify-center items-center">
-        <h1 class="text-xl text-white font-bold">HelloWorld!</h1>
-    </main>
+    {{ $slot }}
 </body>
 
 </html>
