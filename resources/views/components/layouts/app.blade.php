@@ -24,7 +24,7 @@
 
 <body>
     <livewire:common.header>
-    <main class="h-full min-h-screen w-full flex justify-center items-center">
+    <main>
         {{ $slot }}
     </main>
     <livewire:common.footer>
