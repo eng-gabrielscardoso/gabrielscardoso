@@ -1,19 +1,29 @@
-<header class="absolute top-0 w-full flex justify-between items-center bg-base-200 ">
-    <nav class="navbar">
-        <div class="flex-1">
-        <a href="/" wire:navigate class="btn btn-ghost text-xl">{{ config('app.name') }}</a>
-    </nav>
-    <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-            <li>
-                <a href="/about" wire:navigate>About</a>
-            </li>
-            <li>
-                <a href="/projects" wire:navigate>Projects</a>
-            </li>
-            <li>
-                <a href="/contact" wire:navigate>Contact</a>
-            </li>
-        </ul>
+<div class="navbar bg-base-100 shadow-md">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <button role="button" class="btn btn-ghost btn-circle cursor-pointer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                    <a href="/about" wire:navigate>About</a>
+                </li>
+                <li>
+                    <a href="/projects" wire:navigate>Projects</a>
+                </li>
+                <li>
+                    <a href="/contact" wire:navigate>Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</header>
+    <div class="navbar-center">
+        <a href="/" class="btn btn-ghost text-xl" wire:navigate>{{ config('app.name') }}</a>
+    </div>
+    <div class="navbar-end">
+        <a href="https://github.com/eng-gabrielscardoso" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost btn-circle">
+            <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+    </div>
+</div>

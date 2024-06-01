@@ -10,6 +10,9 @@ export default {
             fontFamily: {
                 sans: ['Lato', 'sans-serif'],
             },
+            backgroundImage: {
+                'home-hero': 'url("/public/images/home-hero.jpg")',
+            }
         },
     },
     plugins: [
