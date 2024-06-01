@@ -2,7 +2,11 @@
     "name": "eng-gabrielscardoso/gabrielscardoso",
     "type": "project",
     "description": "The Gabriel Santos Cardoso personal web portfolio.",
-    "keywords": ["Gabriel Santos Cardoso", "web", "portfolio"],
+    "keywords": [
+        "Gabriel Santos Cardoso",
+        "web",
+        "portfolio"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -35,7 +39,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
