@@ -19,11 +19,15 @@
     @vite('resources/css/app.css')
 
     {{-- title --}}
-    <title>{{ "$title | Software Solutions" ?? 'Gabriel S. Cardoso | Software Solutions'}}</title>
+    <title>{{ "$title | G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions'}}</title>
 </head>
 
 <body>
-    {{ $slot }}
+    <livewire:common.header>
+    <main class="h-full min-h-screen w-full flex justify-center items-center">
+        {{ $slot }}
+    </main>
+    <livewire:common.footer>
 </body>
 
 </html>

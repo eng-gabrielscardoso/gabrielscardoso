@@ -1,4 +1,4 @@
-<header class="w-full flex justify-between items-center bg-base-200">
+<header class="sticky top-0 w-full flex justify-between items-center bg-base-200">
     <nav class="navbar ">
         <div class="flex-1">
         <a class="btn btn-ghost text-xl">{{ config('app.name') }}</a>
