@@ -12,11 +12,12 @@
 - [ ] Support to read curriculum vitae and extract data
 - [ ] Finish projects page
 - [ ] Componentise application frontend
-- [ ] Integrate Google Analytics
 
 ## Cool! When we have time
 
+- [ ] Configure GH actions for lint and test
 - [ ] i18n
+- [ ] Integrate Google analytics
 - [ ] Support avatars for user, schools and companies
 
 ## Nah! In your free-time maybe...
