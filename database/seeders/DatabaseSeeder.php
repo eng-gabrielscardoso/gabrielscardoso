@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Education;
+use App\Models\Experience;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Education::factory()->count(5)->create();
+
+        Experience::factory()->count(10)->create();
     }
 }
