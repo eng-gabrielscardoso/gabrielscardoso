@@ -1,10 +1,10 @@
 <div class="flex flex-col items-center">
     <div class="relative p-4 h-full min-h-screen w-full flex items-center justify-center gap-4 bg-home-hero bg-cover bg-center">
-        <div class="card w-full md:w-1/3 bg-base-100 shadow-xl">
+        <div class="card w-full md:w-1/2 lg:w-1/3 xl:w-1/4 bg-base-100 shadow-xl">
             <div class="card-body items-center">
                 <h2 class="card-title">Contact Me</h2>
                 <p>Have a sugestion, issue or simply want to send a message? Just fill above and let's chat!</p>
-                <form wire:submit.prevent="sendMessage" class="w-full flex flex-col gap-2 items-center">
+                <form wire:submit="sendMessage" class="w-full flex flex-col gap-2 items-center">
                     <div class="w-full">
                         <label class="input input-bordered flex items-center gap-2">
                             <i class="fa-solid fa-signature"></i>

@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/21370d6dca.js" crossorigin="anonymous"></script>
 
     {{-- node imports  --}}
+    @vite('resources/js/app.js')
     @vite('resources/css/app.css')
 
     {{-- title --}}

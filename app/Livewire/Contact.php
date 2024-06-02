@@ -3,7 +3,6 @@
 namespace App\Livewire;
 
 use App\Mail\ContactMessage;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
@@ -37,13 +36,13 @@ class Contact extends Component
             ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
 
         $this->resetState();
-   }
+    }
 
-   public function resetState()
-   {
-       $this->name = '';
-       $this->email = '';
-       $this->subject = '';
-       $this->message = '';
-   }
+    public function resetState()
+    {
+        $this->name = '';
+        $this->email = '';
+        $this->subject = '';
+        $this->message = '';
+    }
 }
