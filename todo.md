@@ -5,7 +5,7 @@
 - [x] Project setup
 - [x] Admin panel
 - [x] Finish education section
-- [ ] Finish professional experiences section
+- [x] Finish professional experiences section
 - [ ] Finish about page
 - [ ] Finish contact page
 - [ ] Finish projects page
