@@ -10,4 +10,9 @@ class Headline extends Component
     {
         return view('components.home.headline');
     }
+
+    public function redirectToContact()
+    {
+        return redirect()->to('/contact');
+    }
 }

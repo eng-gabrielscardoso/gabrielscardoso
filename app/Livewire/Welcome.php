@@ -12,9 +12,4 @@ class Welcome extends Component
     {
         return view('welcome');
     }
-
-    public function redirectToContact()
-    {
-        return redirect()->to('/contact');
-    }
 }
