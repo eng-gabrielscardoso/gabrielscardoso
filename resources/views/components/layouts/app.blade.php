@@ -19,7 +19,7 @@
     @vite('resources/css/app.css')
 
     {{-- title --}}
-    <title>{{ "$title | G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions'}}</title>
+    <title>{{ "$title - G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions'}}</title>
 </head>
 
 <body class="scrollbar-custom">
