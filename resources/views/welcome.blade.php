@@ -38,16 +38,7 @@
         </div>
     </div>
     <div class="container px-4 py-12 flex flex-col items-center gap-8">
-        <section class="w-full flex flex-col items-center gap-4">
-            <article class="w-full prose lg:prose-xl">
-                <h2 class="text-primary text-center">Education</h2>
-            </article>
-            <div class="w-full carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
-                <div class="carousel-item">
-                    <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" class="rounded-box" />
-                </div>
-            </div>
-        </section>
+        <livewire:home.educations>
         <section class="w-full flex flex-col items-center gap-4">
             <article class="w-full prose lg:prose-xl">
                 <h2 class="text-primary text-center">Experiences</h2>

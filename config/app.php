@@ -123,4 +123,28 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Application Datetime Format
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the datetime format used throughout
+    | the application and in the API responses.
+    |
+    */
+
+    'datetime_format' => 'Y-m-d H:i:s',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Date Format
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the date format used throughout
+    | the application and in the API responses.
+    |
+    */
+
+    'date_format' => 'Y-m-d',
+
 ];

@@ -22,7 +22,7 @@
     <title>{{ "$title | G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions'}}</title>
 </head>
 
-<body>
+<body class="scrollbar-custom">
     <livewire:common.header>
     <main>
         {{ $slot }}

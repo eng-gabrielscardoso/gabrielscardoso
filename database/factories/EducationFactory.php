@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -48,14 +49,16 @@ class EducationFactory extends Factory
             'University of Abuja',
         ];
 
+        $start_date = Carbon::create($this->faker->date());
+
         return [
             'degree' => $this->faker->randomElement($degrees),
             'course' => $this->faker->randomElement($courses),
             'field_of_study' => $this->faker->randomElement($fields_of_study),
             'school' => $this->faker->randomElement($schools),
             'description' => $this->faker->paragraph(5),
-            'start_date' => $this->faker->date(),
-            'end_date' => $this->faker->date(),
+            'start_date' => $start_date,
+            'end_date' => $start_date->copy()->addYears(4),
         ];
     }
 }
