@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('Secret123456@'),
         ]);
 
-        Education::factory()->count(5)->create();
+        Education::factory()->count(4)->create();
 
-        Experience::factory()->count(10)->create();
+        Experience::factory()->count(6)->create();
     }
 }

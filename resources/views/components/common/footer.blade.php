@@ -18,6 +18,9 @@
         </div>
     </nav>
     <aside>
-        <p>Copyright © {{ date('Y') }} - All right reserved by Gabriel Santos Cardoso</p>
+        <span>
+            Copyright © {{ date('Y') }} - All right reserved by
+            <a href="https://github.com/eng-gabrielscardoso" target="_blank" rel="noopener noreferrer" class="text-primary link">Gabriel Santos Cardoso</a>
+        </span>
     </aside>
 </footer>

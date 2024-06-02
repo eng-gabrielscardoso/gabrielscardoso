@@ -10,7 +10,7 @@ class Educations extends Component
     /**
      * @var \Illuminate\Database\Eloquent\Collection<Education>|null
      */
-    public $educations;
+    public $educations = null;
 
     public function render()
     {
