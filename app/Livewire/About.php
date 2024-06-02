@@ -12,4 +12,9 @@ class About extends Component
     {
         return view('about');
     }
+
+    public function redirectToContact()
+    {
+        return redirect()->to('/contact');
+    }
 }

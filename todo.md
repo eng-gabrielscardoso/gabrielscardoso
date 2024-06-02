@@ -6,7 +6,7 @@
 - [x] Admin panel
 - [x] Finish education section
 - [x] Finish professional experiences section
-- [ ] Finish about page
+- [x] Finish about page
 - [ ] Finish contact page
 - [ ] Finish projects page
 - [ ] Componentise application frontend 
