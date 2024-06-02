@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Masmerise\Toaster\Toaster;
 
 #[Title('Contact')]
 class Contact extends Component
@@ -34,6 +35,8 @@ class Contact extends Component
 
         Mail::to(config('mail.from.address'))
             ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
+
+        Toaster::success('Message sent successfully!');
 
         $this->resetState();
     }

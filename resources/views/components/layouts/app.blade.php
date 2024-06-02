@@ -24,11 +24,15 @@
 </head>
 
 <body class="scrollbar-custom">
+    {{-- application layout --}}
     <livewire:common.header>
     <main>
         {{ $slot }}
     </main>
     <livewire:common.footer>
+
+    {{-- toaster component --}}
+    <x-toaster-hub />
 </body>
 
 </html>
