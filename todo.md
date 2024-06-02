@@ -9,7 +9,8 @@
 - [x] Finish about page
 - [ ] Finish contact page
 - [ ] Finish projects page
-- [ ] Componentise application frontend 
+- [ ] Componentise application frontend
+- [ ] Integrate Google Analytics
 
 ## Cool! When we have time
 
