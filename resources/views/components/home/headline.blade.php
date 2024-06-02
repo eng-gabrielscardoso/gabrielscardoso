@@ -1,4 +1,4 @@
-<div class="relative px-4 h-full min-h-screen w-full flex items-center justify-center">
+<div class="relative px-4 h-full min-h-screen w-full flex items-center justify-center bg-home-hero bg-cover bg-center">
     <article class="prose lg:prose-xl text-center">
         <div class="avatar">
             <figure class="w-60 h-60 relative rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 rounded-full">
