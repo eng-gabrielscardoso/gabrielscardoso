@@ -8,7 +8,7 @@
                 <div class="card-body h-80 md:h-64">
                     <strong class="card-title">{{ $education->course }}</strong>
                     <i>{{ $education->degree }}</i>
-                    <span><b class="text-accent">{{ $education->school }}</b> | {{ $education->start_date }} - {{ $education->end_date ?? 'Present' }}</span>
+                    <span><b class="text-accent">{{ $education->school }}</b> | {{ $education->start_date }} to {{ $education->end_date ?? 'Present' }}</span>
                     <br>
                     <p class="overflow-y-scroll">{{ $education->description }}</p>
                 </div>

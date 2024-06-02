@@ -8,7 +8,7 @@
                 <div class="card-body h-80 md:h-64">
                     <strong class="card-title">{{ $experience->title }}</strong>
                     <i>{{ $experience->company }}</i>
-                    <span><b class="text-accent">{{ $experience->employment_type }}</b> | {{ $experience->start_date }} - {{ $experience->end_date ?? 'Present' }}</span>
+                    <span><b class="text-accent">{{ $experience->employment_type }}</b> | {{ $experience->start_date }} to {{ $experience->end_date ?? 'Present' }}</span>
                     <br>
                     <p class="overflow-y-scroll">{{ $experience->description }}</p>
                 </div>

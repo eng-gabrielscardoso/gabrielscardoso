@@ -9,6 +9,7 @@
 - [x] Finish about page
 - [x] Finish contact page
 - [x] Create a toaster
+- [ ] Support to read curriculum vitae and extract data
 - [ ] Finish projects page
 - [ ] Componentise application frontend
 - [ ] Integrate Google Analytics

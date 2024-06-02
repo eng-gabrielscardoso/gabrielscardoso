@@ -40,7 +40,7 @@ class EducationResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->minLength(3)
-                    ->maxLength(255)
+                    ->maxLength(1000)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
                     ->required(),
