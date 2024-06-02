@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
@@ -42,7 +41,7 @@ class ContactMessage extends Mailable
             from: new Address(config('mail.from.address'), config('mail.from.name')),
             subject: "New Contact Message - {$this->subject}",
             replyTo: [
-                new Address($this->email, $this->name)
+                new Address($this->email, $this->name),
             ],
         );
     }
