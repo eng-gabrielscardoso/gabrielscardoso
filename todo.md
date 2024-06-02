@@ -7,7 +7,7 @@
 - [x] Finish education section
 - [x] Finish professional experiences section
 - [x] Finish about page
-- [ ] Finish contact page
+- [x] Finish contact page
 - [ ] Finish projects page
 - [ ] Componentise application frontend
 - [ ] Integrate Google Analytics
