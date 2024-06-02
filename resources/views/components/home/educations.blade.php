@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         @foreach ($educations as $education)
             <div class="card w-full bg-base-200 shadow-xl">
-                <div class="card-body h-80">
+                <div class="card-body h-80 md:h-64">
                     <strong class="card-title">{{ $education->course }}</strong>
                     <i>{{ $education->degree }}</i>
                     <span><b class="text-accent">{{ $education->school }}</b> | {{ $education->start_date }} - {{ $education->end_date ?? 'Present' }}</span>
