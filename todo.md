@@ -8,7 +8,7 @@
 - [x] Finish professional experiences section
 - [x] Finish about page
 - [x] Finish contact page
-- [ ] Create a toaster
+- [x] Create a toaster
 - [ ] Finish projects page
 - [ ] Componentise application frontend
 - [ ] Integrate Google Analytics
