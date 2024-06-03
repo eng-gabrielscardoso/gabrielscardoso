@@ -26,6 +26,6 @@ class DatabaseSeeder extends Seeder
 
         Experience::factory()->count(6)->create();
 
-        Project::factory()->count(10)->create();
+        Project::factory()->count(6)->create();
     }
 }

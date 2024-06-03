@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -44,27 +43,5 @@ class Education extends Model
             'start_date' => 'date',
             'end_date' => 'date',
         ];
-    }
-
-    /**
-     * Get the start date in the configured format.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    public function getStartDateAttribute($value)
-    {
-        return Carbon::parse($value)->format(config('app.date_format', 'd/m/Y'));
-    }
-
-    /**
-     * Get the end date in the configured format.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    public function getEndDateAttribute($value)
-    {
-        return $value ? Carbon::parse($value)->format(config('app.date_format', 'd/m/Y')) : null;
     }
 }
