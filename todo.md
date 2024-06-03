@@ -9,10 +9,9 @@
 - [x] Finish about page
 - [x] Finish contact page
 - [x] Create a toaster
-- [ ] Finish projects page
-- [ ] Create loading indicator
+- [x] Finish projects page
 - [ ] Create a better error pages
-- [ ] Componentise application frontend
+- [x] Componentise application frontend
 
 ## Cool! When we have time
 
