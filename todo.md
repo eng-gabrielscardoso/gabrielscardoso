@@ -9,7 +9,6 @@
 - [x] Finish about page
 - [x] Finish contact page
 - [x] Create a toaster
-- [ ] Support to read curriculum vitae and extract data
 - [ ] Finish projects page
 - [ ] Create loading indicator
 - [ ] Create a better error pages
@@ -18,6 +17,7 @@
 ## Cool! When we have time
 
 - [ ] Configure GH actions for lint and test
+- [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
 - [ ] Integrate Google analytics
 - [ ] Support avatars for user, schools and companies
