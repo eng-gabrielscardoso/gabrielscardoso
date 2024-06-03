@@ -2,8 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\EducationResource\Pages;
-use App\Models\Education;
+use App\Filament\Resources\ProjectResource\Pages;
+use App\Filament\Resources\ProjectResource\RelationManagers;
+use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class EducationResource extends Resource
+class ProjectResource extends Resource
 {
-    protected static ?string $model = Education::class;
+    protected static ?string $model = Project::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -22,18 +23,11 @@ class EducationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('degree')
+                Forms\Components\TextInput::make('title')
                     ->required()
-                    ->minLength(3)
+                    ->minLength(1)
                     ->maxLength(255),
-                Forms\Components\TextInput::make('course')
-                    ->required()
-                    ->minLength(3)
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('field_of_study')
-                    ->minLength(3)
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('school')
+                Forms\Components\TextInput::make('association')
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
@@ -41,7 +35,7 @@ class EducationResource extends Resource
                     ->required()
                     ->autosize()
                     ->minLength(3)
-                    ->maxLength(1000)
+                    ->maxLength(1024)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
                     ->required(),
@@ -53,13 +47,9 @@ class EducationResource extends Resource
     {
         return $table
             ->columns([
-                // Tables\Columns\TextColumn::make('degree')
-                //     ->searchable(),
-                Tables\Columns\TextColumn::make('course')
+                Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                // Tables\Columns\TextColumn::make('field_of_study')
-                //     ->searchable(),
-                Tables\Columns\TextColumn::make('school')
+                Tables\Columns\TextColumn::make('association')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_date')
                     ->date()
@@ -67,14 +57,18 @@ class EducationResource extends Resource
                 Tables\Columns\TextColumn::make('end_date')
                     ->date()
                     ->sortable(),
-                // Tables\Columns\TextColumn::make('created_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
-                // Tables\Columns\TextColumn::make('updated_at')
-                //     ->dateTime()
-                //     ->sortable()
-                //     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
@@ -102,10 +96,10 @@ class EducationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEducation::route('/'),
-            'create' => Pages\CreateEducation::route('/create'),
-            'view' => Pages\ViewEducation::route('/{record}'),
-            'edit' => Pages\EditEducation::route('/{record}/edit'),
+            'index' => Pages\ListProjects::route('/'),
+            'create' => Pages\CreateProject::route('/create'),
+            'view' => Pages\ViewProject::route('/{record}'),
+            'edit' => Pages\EditProject::route('/{record}/edit'),
         ];
     }
 
