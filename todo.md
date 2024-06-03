@@ -11,6 +11,7 @@
 - [x] Create a toaster
 - [ ] Support to read curriculum vitae and extract data
 - [ ] Finish projects page
+- [ ] Create loading indicator
 - [ ] Create a better error pages
 - [ ] Componentise application frontend
 
