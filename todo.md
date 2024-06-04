@@ -10,6 +10,8 @@
 - [x] Finish contact page
 - [x] Create a toaster
 - [x] Finish projects page
+- [ ] Finish SEO for better site ranking
+- [ ] Check and validate assets
 - [ ] Create a better error pages
 - [ ] Change application theme
 - [x] Componentise application frontend
