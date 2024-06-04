@@ -15,7 +15,7 @@
 - [ ] Finish SEO for better site ranking
 - [ ] Check and validate assets
 - [ ] Create a better error pages
-- [ ] Change application theme
+- [x] Change application theme
 - [ ] Configure upload of files and assets
 - [x] Componentise application frontend
 

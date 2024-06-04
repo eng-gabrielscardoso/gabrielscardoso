@@ -25,7 +25,7 @@
     <title>{{ "$title - G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions' }}</title>
 </head>
 
-<body class="scrollbar-custom">
+<body data-theme="business" class="scrollbar-custom">
     <noscript>
         <div role="alert" class="alert alert-warning">
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
