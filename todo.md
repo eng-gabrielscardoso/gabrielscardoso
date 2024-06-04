@@ -14,6 +14,7 @@
 - [ ] Check and validate assets
 - [ ] Create a better error pages
 - [ ] Change application theme
+- [ ] Configure upload of files and assets
 - [x] Componentise application frontend
 
 ## Cool! When we have time
@@ -23,7 +24,6 @@
 - [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
 - [ ] Integrate Google analytics
-- [ ] Support avatars for user, schools and companies
 
 ## Nah! In your free-time maybe...
 
