@@ -15,6 +15,7 @@
 
 ## Cool! When we have time
 
+- [ ] Create a blog support
 - [ ] Configure GH actions for lint and test
 - [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
