@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-md">
+<div class="fixed navbar bg-base-100 shadow-md z-50 rounded-b-md">
     <div class="navbar-start">
         <div class="dropdown">
             <button role="button" class="btn btn-ghost btn-circle cursor-pointer">

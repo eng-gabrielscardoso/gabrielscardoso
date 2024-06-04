@@ -42,9 +42,9 @@
 
     {{-- application layout --}}
     <livewire:common.header>
-        <main>
-            {{ $slot }}
-        </main>
+    <main>
+        {{ $slot }}
+    </main>
     <livewire:common.footer>
 
     {{-- toaster component --}}
