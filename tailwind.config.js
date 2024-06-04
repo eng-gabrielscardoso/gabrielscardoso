@@ -12,7 +12,7 @@ export default {
                 sans: ['Lato', 'sans-serif'],
             },
             backgroundImage: {
-                'home-hero': 'url("/public/images/home-hero.jpg")',
+                'home-hero': 'url("/public/images/home-hero.webp")',
             }
         },
     },
