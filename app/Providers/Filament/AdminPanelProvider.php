@@ -28,7 +28,12 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Violet,
+                'primary' => '#1c4e80',
+                'gray' => '#202020',
+                'info' => '#0091d5',
+                'success' => '#6bb187',
+                'warning' => '#dbae59',
+                'danger' => '#ac3e31',
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -53,6 +58,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->font('Lato');
     }
 }
