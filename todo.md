@@ -23,6 +23,7 @@
 
 - [ ] Install Debugbar
 - [ ] Install Laravel Pail
+- [ ] Refactor components to Livewire Volt
 - [ ] Create a blog support
 - [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
