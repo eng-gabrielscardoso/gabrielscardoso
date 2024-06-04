@@ -11,6 +11,7 @@
 - [x] Create a toaster
 - [x] Finish projects page
 - [ ] Create a better error pages
+- [ ] Change application theme
 - [x] Componentise application frontend
 
 ## Cool! When we have time
