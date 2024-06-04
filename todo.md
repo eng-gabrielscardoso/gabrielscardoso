@@ -22,7 +22,7 @@
 ## Cool! When we have time
 
 - [ ] Install Debugbar
-- [ ] Install Laravel Pail
+- [x] Install Laravel Pail
 - [ ] Refactor components to Livewire Volt
 - [ ] Create a blog support
 - [ ] Support to read curriculum vitae and extract data
