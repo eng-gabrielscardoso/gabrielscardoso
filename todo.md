@@ -10,6 +10,8 @@
 - [x] Finish contact page
 - [x] Create a toaster
 - [x] Finish projects page
+- [ ] Create change log, architecture, and other necessary docs
+- [ ] Configure GH actions for lint and test and CI/CD
 - [ ] Finish SEO for better site ranking
 - [ ] Check and validate assets
 - [ ] Create a better error pages
@@ -20,7 +22,6 @@
 ## Cool! When we have time
 
 - [ ] Create a blog support
-- [ ] Configure GH actions for lint and test
 - [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
 - [ ] Integrate Google analytics
