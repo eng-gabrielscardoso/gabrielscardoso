@@ -33,7 +33,7 @@ class ExperienceResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Select::make('employment_type')
                     ->required()
-                    ->options(EmploymentType::values()),
+                    ->options(EmploymentType::class),
                 Forms\Components\TextInput::make('location')
                     ->required()
                     ->minLength(3)

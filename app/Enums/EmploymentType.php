@@ -3,8 +3,9 @@
 namespace App\Enums;
 
 use App\Support\EnumToArray;
+use Filament\Support\Contracts\HasLabel;
 
-enum EmploymentType: string
+enum EmploymentType: string implements HasLabel
 {
     use EnumToArray;
 
@@ -17,4 +18,19 @@ enum EmploymentType: string
     case INTERNSHIP = 'internship';
     case APPRENTICESHIP = 'apprenticeship';
     case VOLUNTEER = 'volunteer';
+
+    public function getLabel(): ?string
+    {
+        return match ($this) {
+            self::FULL_TIME => 'Full Time',
+            self::PART_TIME => 'Part Time',
+            self::SELF_EMPLOYED => 'Self Employed',
+            self::FREELANCE => 'Freelance',
+            self::CONTRACT => 'Contract',
+            self::INDIRECT_CONTRACT => 'Indirect Contract',
+            self::INTERNSHIP => 'Internship',
+            self::APPRENTICESHIP => 'Apprenticeship',
+            self::VOLUNTEER => 'Volunteer',
+        };
+    }
 }
