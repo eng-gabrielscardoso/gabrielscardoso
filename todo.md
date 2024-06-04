@@ -12,7 +12,7 @@
 - [x] Finish projects page
 - [ ] Create change log, architecture, and other necessary docs
 - [ ] Configure GH actions for lint and test and CI/CD
-- [ ] Finish SEO for better site ranking
+- [x] Finish SEO for better site ranking
 - [ ] Check and validate assets
 - [ ] Create a better error pages
 - [x] Change application theme
