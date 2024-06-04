@@ -21,6 +21,8 @@
 
 ## Cool! When we have time
 
+- [ ] Install Debugbar
+- [ ] Install Laravel Pail
 - [ ] Create a blog support
 - [ ] Support to read curriculum vitae and extract data
 - [ ] i18n
