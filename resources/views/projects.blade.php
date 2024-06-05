@@ -38,7 +38,7 @@
                 </a>
             </article>
             <div>
-                <div class="mockup-window rounded-lg bg-base-300 max-w-[1024px] w-full">
+                <div class="mockup-window rounded-lg bg-base-300 w-full max-w-[1024px] h-full max-h-[576px]">
                     <figure>
                         <img src="images/home-hero.webp" alt="Project Overview" class="bg-contain">
                     </figure>
