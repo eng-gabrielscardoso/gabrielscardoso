@@ -21,6 +21,8 @@
 
 ## Cool! When we have time
 
+- [ ] Install Cashier
+- [ ] Create a `Buy me a Açaí` section
 - [ ] Install Debugbar
 - [x] Install Laravel Pail
 - [ ] Refactor components to Livewire Volt
