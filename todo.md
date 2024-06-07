@@ -17,6 +17,7 @@
 - [ ] Create a better error pages
 - [x] Change application theme
 - [ ] Configure upload of files and assets
+- [ ] Perform adjusts in Contact page
 - [x] Componentise application frontend
 
 ## Cool! When we have time
