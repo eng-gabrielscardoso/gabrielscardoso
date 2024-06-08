@@ -19,6 +19,7 @@ class Project extends Model
         'title',
         'association',
         'description',
+        'link',
         'start_date',
         'end_date',
     ];

@@ -18,33 +18,35 @@
         </article>
     </div>
     <div class="w-full flex flex-col gap-4">
-        <div class="p-4 flex flex-col md:flex-row items-center justify-center gap-4">
-            <article class="prose lg:prose-xl">
-                <h2>
-                    <span class="badge badge-accent badge-lg"></span>
-                    Project name
-                </h2>
-                <span class="text-secondary">
-                    Marketing Website Redesign
-                </span>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur ratione inventore, odit
-                    aspernatur possimus architecto nulla cupiditate dolorum ipsum reprehenderit voluptate consequuntur
-                    nesciunt quis cum ex magnam placeat sapiente voluptatum.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                    class="font-bold no-underline hover:text-secondary transition-colors">
-                    View Project <i class="fa-solid fa-arrow-right text-accent"></i>
-                </a>
-            </article>
-            <div>
-                <div class="mockup-window rounded-lg bg-base-300 w-full max-w-[1024px] h-full max-h-[576px]">
-                    <figure>
-                        <img src="images/home-hero.webp" alt="Project Overview" class="bg-contain">
-                    </figure>
+        @foreach ($projects as $index => $project)
+            <div class="p-4 flex flex-col md:flex-row items-center justify-center gap-4">
+                <article class="prose lg:prose-xl">
+                    <h2>
+                        <span class="badge badge-accent badge-lg"></span>
+                        {{ $project->title }}
+                    </h2>
+                    <span class="text-secondary">
+                        {{ $project->association }}
+                    </span>
+                    <p>
+                        {{ $project->description }}
+                    </p>
+                    <a href="{{ $project->link }}" target="_blank" rel="noopener noreferrer"
+                        class="font-bold no-underline hover:text-secondary transition-colors">
+                        View Project <i class="fa-solid fa-arrow-right text-accent"></i>
+                    </a>
+                </article>
+                <div>
+                    <div class="mockup-window rounded-lg bg-base-300 w-full max-w-[1024px] h-full max-h-[576px]">
+                        <figure>
+                            <img src="images/home-hero.webp" alt="Project Overview" class="bg-contain">
+                        </figure>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="divider"></div>
+            @if ((count($projects) - 1) != $index)
+                <div class="divider"></div>
+            @endif
+        @endforeach
     </div>
 </div>

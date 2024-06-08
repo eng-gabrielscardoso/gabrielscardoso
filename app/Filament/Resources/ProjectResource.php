@@ -36,6 +36,10 @@ class ProjectResource extends Resource
                     ->minLength(3)
                     ->maxLength(1024)
                     ->columnSpanFull(),
+                Forms\Components\TextInput::make('link')
+                    ->required()
+                    ->url(),
+
                 Forms\Components\DatePicker::make('start_date')
                     ->required(),
                 Forms\Components\DatePicker::make('end_date'),

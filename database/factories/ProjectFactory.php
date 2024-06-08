@@ -23,6 +23,7 @@ class ProjectFactory extends Factory
             'title' => $this->faker->company(),
             'association' => $this->faker->company(),
             'description' => $this->faker->paragraph(5),
+            'link' => $this->faker->url(),
             'start_date' => $start_date,
             'end_date' => $start_date->copy()->addYears($this->faker->numberBetween(1, 5)),
         ];
