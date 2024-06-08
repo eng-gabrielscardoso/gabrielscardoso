@@ -25,7 +25,7 @@
     @vite('resources/css/app.css')
 
     {{-- title --}}
-    <title>{{ "$title - G. S. Cardoso" ?? 'Gabriel S. Cardoso | Software Solutions' }}</title>
+    <title>Not Found</title>
 </head>
 
 <body data-theme="business" class="scrollbar-custom">
@@ -40,13 +40,25 @@
         </div>
     </noscript>
 
-    {{-- error layout --}}
     <div class="flex flex-col justify-center items-center min-h-screen bg-base-200">
         <figure>
-            <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" alt="Error image" class="bg-contain">
+            <img src="/images/404.png"
+                alt="Error image" width="384">
         </figure>
         <div class="text-center lg:text-left">
-            {{ $slot }}
+            <article class="prose lg:prose-xl">
+                <h1>Oops!</h1>
+                <p>
+                    It seems that the requested page has already been removed or were not founded in our resources
+                    collection.
+                </p>
+                <p>
+                    If you really need this page please contact the support or hold on for a moment.
+                </p>
+                <button class="btn btn-primary" onclick="window.location='/'">
+                    Go back to home
+                </button>
+            </article>
         </div>
     </div>
 
