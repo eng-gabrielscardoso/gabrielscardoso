@@ -13,10 +13,10 @@
 - [x] Create change log, architecture, and other necessary docs
 - [ ] Configure GH actions for lint and test and CI/CD
 - [x] Finish SEO for better site ranking
-- [ ] Check and validate assets
+- [x] Check and validate assets
 - [x] Create a better error pages
 - [x] Change application theme
-- [ ] Configure upload of files and assets
+- [x] Configure upload of files and assets
 - [x] Perform adjusts in Contact page
 - [x] Componentise application frontend
 

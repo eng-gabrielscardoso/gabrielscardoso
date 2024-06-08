@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Mail\ContactMessage;
 use App\Models\Message;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
@@ -42,18 +43,23 @@ class Contact extends Component
             return;
         }
 
-        Message::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'next_message_at' => now()->addDay(),
-        ]);
+        try {
+            Message::create([
+                'name' => $this->name,
+                'email' => $this->email,
+                'next_message_at' => now()->addDay(),
+            ]);
 
-        Mail::to(config('mail.from.address'))
-            ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
+            Mail::to(config('mail.from.address'))
+                ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
 
-        Toaster::success('Message sent successfully!');
-
-        $this->resetState();
+            Toaster::success('Message sent successfully!');
+        } catch(\Exception $e) {
+            Log::error($e->getMessage());
+            Toaster::success('Some error occurred during message sending. Try again later.');
+        } finally {
+            $this->resetState();
+        }
     }
 
     public function resetState()

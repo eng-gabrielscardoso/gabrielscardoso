@@ -20,7 +20,7 @@
     <div class="w-full flex flex-col gap-4">
         @foreach ($projects as $index => $project)
             <div class="p-4 flex flex-col md:flex-row items-center justify-center gap-4">
-                <article class="prose lg:prose-xl">
+                <article class="w-full md:w-1/2 prose lg:prose-xl">
                     <h2>
                         <span class="badge badge-accent badge-lg"></span>
                         {{ $project->title }}
@@ -36,10 +36,10 @@
                         View Project <i class="fa-solid fa-arrow-right text-accent"></i>
                     </a>
                 </article>
-                <div>
+                <div class="w-full md:w-1/2">
                     <div class="mockup-window rounded-lg bg-base-300 w-full max-w-[1024px] h-full max-h-[576px]">
                         <figure>
-                            <img src="images/home-hero.webp" alt="Project Overview" class="bg-contain">
+                            <img src="{{ $project->image ? Storage::url($project->image) : 'images/seo-image.webp' }}" alt="Project Overview" width="1024" height="576" class="bg-cover">
                         </figure>
                     </div>
                 </div>

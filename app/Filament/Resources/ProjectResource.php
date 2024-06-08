@@ -11,6 +11,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class ProjectResource extends Resource
 {
@@ -25,24 +28,35 @@ class ProjectResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->minLength(1)
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->columnSpanFull(),
                 Forms\Components\TextInput::make('association')
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
+                Forms\Components\TextInput::make('link')
+                    ->required()
+                    ->url(),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->autosize()
                     ->minLength(3)
                     ->maxLength(1024)
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('link')
-                    ->required()
-                    ->url(),
-
                 Forms\Components\DatePicker::make('start_date')
                     ->required(),
                 Forms\Components\DatePicker::make('end_date'),
+                Forms\Components\FileUpload::make('image')
+                    ->required()
+                    ->directory('projects')
+                    ->maxSize(1024)
+                    ->maxFiles(1)
+                    ->image()
+                    ->imageEditor()
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth(1024)
+                    ->imageResizeTargetHeight(576)
+                    ->columnSpanFull(),
             ]);
     }
 

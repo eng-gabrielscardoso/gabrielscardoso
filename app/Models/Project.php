@@ -20,6 +20,7 @@ class Project extends Model
         'association',
         'description',
         'link',
+        'image',
         'start_date',
         'end_date',
     ];
