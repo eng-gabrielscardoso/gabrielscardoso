@@ -10,14 +10,14 @@
 - [x] Finish contact page
 - [x] Create a toaster
 - [x] Finish projects page
-- [ ] Create change log, architecture, and other necessary docs
+- [x] Create change log, architecture, and other necessary docs
 - [ ] Configure GH actions for lint and test and CI/CD
 - [x] Finish SEO for better site ranking
 - [ ] Check and validate assets
-- [ ] Create a better error pages
+- [x] Create a better error pages
 - [x] Change application theme
 - [ ] Configure upload of files and assets
-- [ ] Perform adjusts in Contact page
+- [x] Perform adjusts in Contact page
 - [x] Componentise application frontend
 
 ## Cool! When we have time
