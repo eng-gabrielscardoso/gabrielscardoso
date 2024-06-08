@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Mail\ContactMessage;
+use App\Models\Message;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
@@ -32,6 +33,20 @@ class Contact extends Component
     public function sendMessage()
     {
         $this->validate();
+
+        $performer = Message::where('email', $this->email)->first();
+
+        if (isset($performer) && $performer->next_message_at > now()) {
+            Toaster::warning('Unfortunately our developer does not have enough budget so please wait a day to send a new message');
+
+            return;
+        }
+
+        Message::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'next_message_at' => now()->addDay(),
+        ]);
 
         Mail::to(config('mail.from.address'))
             ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
