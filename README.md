@@ -2,7 +2,7 @@
 
 <h1>G. S. Cardoso Personal Portfolio</h1>
 
-<img src="https://skillicons.dev/icons?i=php,laravel,tailwind,mysql,docker,linux,vscode,markdown" alt="Tech specification" />
+<img src="https://skillicons.dev/icons?i=php,laravel,tailwind,mysql,docker,github,githubactions,linux,vscode,markdown" alt="Tech specification" />
 
 <br>
 

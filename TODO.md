@@ -11,7 +11,7 @@
 - [x] Create a toaster
 - [x] Finish projects page
 - [x] Create change log, architecture, and other necessary docs
-- [ ] Configure GH actions for lint and test and CI/CD
+- [x] Configure GH actions for lint and test and CI/CD
 - [x] Finish SEO for better site ranking
 - [x] Check and validate assets
 - [x] Create a better error pages
