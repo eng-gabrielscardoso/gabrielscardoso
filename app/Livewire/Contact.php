@@ -44,19 +44,19 @@ class Contact extends Component
         }
 
         try {
+            Mail::to(config('mail.from.address'))
+                ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
+
             Message::create([
                 'name' => $this->name,
                 'email' => $this->email,
                 'next_message_at' => now()->addDay(),
             ]);
 
-            Mail::to(config('mail.from.address'))
-                ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
-
             Toaster::success('Message sent successfully!');
         } catch(\Exception $e) {
             Log::error($e->getMessage());
-            Toaster::success('Some error occurred during message sending. Try again later.');
+            Toaster::error('Some error occurred during message sending. Try again later.');
         } finally {
             $this->resetState();
         }
