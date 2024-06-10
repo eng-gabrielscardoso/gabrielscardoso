@@ -53,7 +53,7 @@ After this, clone the `.env.example` into `.env` and run `sail up -d` to up your
 
 Then, you could work as like you want, for any help just tip `sail` in your terminal.
 
-To interect with MinIO just access the dashboard (default `http://localhost:9000`), fill with credentials (default `sail` and `password`). Create a new bucket and access keys, and update your `.env` with the access keys.
+To interact with MinIO just access the dashboard (default `http://localhost:9000`), fill with credentials (default `sail` and `password`). Create a new bucket and access keys, and update your `.env` with the access keys.
 
 ## Copyright
 
