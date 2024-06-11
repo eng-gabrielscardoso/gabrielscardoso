@@ -19,6 +19,7 @@
 - [x] Configure upload of files and assets
 - [x] Perform adjusts in Contact page
 - [x] Componentise application frontend
+- [ ] i18n
 
 ## Cool! When we have time
 
@@ -29,7 +30,6 @@
 - [ ] Refactor components to Livewire Volt
 - [ ] Create a blog support
 - [ ] Support to read curriculum vitae and extract data
-- [ ] i18n
 - [ ] Integrate Google analytics
 
 ## Nah! In your free-time maybe...
