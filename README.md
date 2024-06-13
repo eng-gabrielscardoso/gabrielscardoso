@@ -26,6 +26,9 @@ This application uses, in summary:
 - DaisyUI
 - MySQL
 - Mailpit
+- MinIO
+- AWS
+- GitHub Actions
 - Any IDE or text editor
 
 ## Implementation
