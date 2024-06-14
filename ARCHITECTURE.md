@@ -34,7 +34,7 @@ Component library for TailwindCSS. While Tailwind CSS provides utility classes f
 
 We utilise various AWS services to enhance scalability, reliability, and performance:
 
-- **LightSail:** *under development*
+- **EC2:** *under development*
 - **RDS:** *under development*
 - **S3:** *under development*
 - **CloudFront:** *under development*
