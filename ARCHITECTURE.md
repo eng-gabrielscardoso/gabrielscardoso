@@ -34,13 +34,7 @@ Component library for TailwindCSS. While Tailwind CSS provides utility classes f
 
 We utilise various AWS services to enhance scalability, reliability, and performance:
 
-- **EC2:** *under development*
-- **RDS:** *under development*
-- **S3:** *under development*
-- **CloudFront:** *under development*
-- **SES:** we utilises the Amazon Web Services Simple Email Service (SES) to provide a solution for email delivery to centralise the services and to take advantage of the free quota that AWS provides for this service. To configure the service to use or test in local just go to the AWS SES panel and configure a new SMTP credentials. Then, fill the SMTP credentials in your `.env` file with username, password and the host.
-- **Route53:** *under development*
-- **CloudWatch:** *under development*
+> Under development
 
 ## Architecture diagram
 
