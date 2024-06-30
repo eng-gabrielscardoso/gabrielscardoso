@@ -54,7 +54,7 @@ class Contact extends Component
             ]);
 
             Toaster::success('Message sent successfully!');
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Toaster::error('Some error occurred during message sending. Try again later.');
         } finally {

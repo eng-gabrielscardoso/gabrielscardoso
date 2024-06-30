@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\EducationResource\Pages;
 use App\Models\Education;
+use App\Support\UsesMonthYearDates;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,6 +15,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class EducationResource extends Resource
 {
+    use UsesMonthYearDates;
+
     protected static ?string $model = Education::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
@@ -44,8 +47,12 @@ class EducationResource extends Resource
                     ->maxLength(1000)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
-                    ->required(),
-                Forms\Components\DatePicker::make('end_date'),
+                    ->required()
+                    ->native(false)
+                    ->displayFormat('m/Y'),
+                Forms\Components\DatePicker::make('end_date')
+                    ->native(false)
+                    ->displayFormat('m/Y'),
             ]);
     }
 
