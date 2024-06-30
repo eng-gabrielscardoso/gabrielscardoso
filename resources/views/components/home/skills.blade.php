@@ -19,13 +19,13 @@
             </div>
         </div>
         <article class="prose lg:prose-xl">
-            <img src="https://skillicons.dev/icons?i=html,css,less,sass,js,ts,php,java,python,go,solidity,bash"
+            <img src="https://go-skill-icons.vercel.app/icons?i=html,css,less,sass,js,ts,php,java,python,go,solidity,bash"
                 alt="Programming languages" class="pb-1" />
-            <img src="https://skillicons.dev/icons?i=tailwind,react,next,vue,nuxt,vitest,jest,express,nestjs,adonis,angular,laravel"
+            <img src="https://go-skill-icons.vercel.app/icons?i=tailwind,react,next,vue,nuxt,vitest,jest,express,nestjs,adonis,angular,laravel"
                 alt="Frameworks and libraries" class="pb-1" />
-            <img src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb,redis,prisma,firebase,supabase,aws,gcp,vercel,netlify,heroku"
+            <img src="https://go-skill-icons.vercel.app/icons?i=mysql,postgresql,mongodb,redis,prisma,firebase,supabase,aws,gcp,vercel,netlify,heroku"
                 alt="Database and ORMs" class="pb-1" />
-            <img src="https://skillicons.dev/icons?i=pnpm,yarn,nodejs,bun,vite,docker,git,linux,github,gitlab,figma,githubactions"
+            <img src="https://go-skill-icons.vercel.app/icons?i=pnpm,yarn,nodejs,bun,vite,docker,git,linux,github,gitlab,figma,githubactions"
                 alt="Tools set" class="py-1" />
         </article>
     </div>
