@@ -21,6 +21,6 @@ class Experiences extends Component
 
     public function mount()
     {
-        $this->experiences = Experience::orderBy('end_date', 'desc')->get();
+        $this->experiences = Experience::orderBy('end_date')->get();
     }
 }
