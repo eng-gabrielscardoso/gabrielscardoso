@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Enums\EmploymentType;
 use App\Filament\Resources\ExperienceResource\Pages;
+use App\Support\UsesMonthYearDates;
 use App\Models\Experience;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -15,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ExperienceResource extends Resource
 {
+    use UsesMonthYearDates;
+
     protected static ?string $model = Experience::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-briefcase';
@@ -45,8 +48,12 @@ class ExperienceResource extends Resource
                     ->maxLength(1024)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
-                    ->required(),
-                Forms\Components\DatePicker::make('end_date'),
+                    ->required()
+                    ->native(false)
+                    ->displayFormat('m/Y'),
+                Forms\Components\DatePicker::make('end_date')
+                    ->native(false)
+                    ->displayFormat('m/Y'),
             ]);
     }
 

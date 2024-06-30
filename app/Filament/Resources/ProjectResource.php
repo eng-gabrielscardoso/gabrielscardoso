@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
+use App\Support\UsesMonthYearDates;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -17,6 +18,8 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class ProjectResource extends Resource
 {
+    use UsesMonthYearDates;
+
     protected static ?string $model = Project::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -44,8 +47,12 @@ class ProjectResource extends Resource
                     ->maxLength(1024)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
-                    ->required(),
-                Forms\Components\DatePicker::make('end_date'),
+                    ->required()
+                    ->native(false)
+                    ->displayFormat('m/Y'),
+                Forms\Components\DatePicker::make('end_date')
+                    ->native(false)
+                    ->displayFormat('m/Y'),
                 Forms\Components\FileUpload::make('image')
                     ->required()
                     ->directory('projects')

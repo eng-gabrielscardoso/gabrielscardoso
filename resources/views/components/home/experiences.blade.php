@@ -8,7 +8,7 @@
                 <div class="card-body h-80 md:h-64">
                     <strong class="card-title">{{ $experience->title }}</strong>
                     <i>{{ $experience->company }}</i>
-                    <span><b class="text-accent">{!! $experience->employment_type->getLabel() !!}</b> | {{ $experience->start_date }} to {{ $experience->end_date ?? 'Present' }}</span>
+                    <span><b class="text-accent">{!! $experience->employment_type->getLabel() !!}</b> | {{ $experience->start_date->format('M Y') }} to {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Present' }}</span>
                     <br>
                     <p class="overflow-y-scroll">{{ $experience->description }}</p>
                 </div>

@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use App\Enums\EmploymentType;
+use App\Support\HasMonthYearDates;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Experience extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, HasMonthYearDates, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
