@@ -32,17 +32,58 @@ Component library for TailwindCSS. While Tailwind CSS provides utility classes f
 
 ### AWS Services
 
-We utilise various AWS services to enhance scalability, reliability, and performance:
+We utilise some AWS services such as:
 
-> Under development
+- **AWS Simple Email Service:** we choose this service to implement a simple email delivering and without costs associated with.
+
+### CloudFlare
+
+We use CloudFlare to register and configure the domain and DNS. This choose were done because CloudFlare has the best performance, cost benefit and provides a free SSL certificate.
+
+### DigitalOcean
+
+The DigitalOcean was choose thinking about the Droplets feature. This service provides a simple machine to configure, maintain and deploy Laravel applications without having to configure a lot of separate services at once. Also, the cost of this service is very low.
 
 ## Architecture diagram
 
-*Under development*
+```mermaid
+graph TD
+    subgraph DigitalOcean
+        direction TB
+        subgraph Containers
+            direction LR
+            AppContainer[Laravel Application]
+            NginxContainer[Nginx]
+            MySQLContainer[MySQL]
+        end
+    end
 
-## Detailed Description
+    subgraph AWS_SES
+        SES[AWS SES]
+    end
 
-*Under development*
+    subgraph Cloudflare
+        DNS[Configured DNS]
+    end
+
+    Website[Website Livewire] --> AppContainer
+    AdminPanel[Admin Panel FilamentPHP] --> AppContainer
+    AppContainer --> MySQLContainer
+    AppContainer --> NginxContainer
+    NginxContainer --> MySQLContainer
+    AppContainer --> SES
+    DNS --> NginxContainer
+
+    style DigitalOcean fill:#f9f,stroke:#333,stroke-width:4px
+    style Containers fill:#bbf,stroke:#333,stroke-width:2px
+    style AppContainer fill:#f3f,stroke:#333,stroke-width:2px
+    style NginxContainer fill:#3f3,stroke:#333,stroke-width:2px
+    style MySQLContainer fill:#3ff,stroke:#333,stroke-width:2px
+    style SES fill:#ff3,stroke:#333,stroke-width:2px
+    style DNS fill:#f3c,stroke:#333,stroke-width:2px
+    style Website fill:#3cf,stroke:#333,stroke-width:2px
+    style AdminPanel fill:#fc3,stroke:#333,stroke-width:2px
+```
 
 ## Conclusion
 
