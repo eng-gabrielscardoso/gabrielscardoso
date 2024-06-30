@@ -14,7 +14,7 @@
 
 ## Summary
 
-This is a simple personal portfolio to expand and improve my professional portfolio and be a way to demonstrate my skills, my experiences and be in contact with me. Also, in future this project will be refactored to be a white-labelled portfolio solution for any developer, enough cloning and configuring to be setted up and go on production. 
+This is a simple personal portfolio to expand and improve my professional portfolio and be a way to demonstrate my skills, my experiences and be in contact with me. Also, in future this project will be refactored to be a white-labelled portfolio solution for any developer, enough cloning and configuring to be setted up and go on production.
 
 ## Specification
 
@@ -28,6 +28,8 @@ This application uses, in summary:
 - Mailpit
 - MinIO
 - AWS
+- Cloudflare
+- DigitalOcean
 - GitHub Actions
 - Any IDE or text editor
 
