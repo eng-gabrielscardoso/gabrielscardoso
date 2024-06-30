@@ -10,8 +10,8 @@ trait HasMonthYearDates
     /**
      * Mutator for setting the date attribute.
      *
-     * @param string $attribute
-     * @param string|null $value
+     * @param  string  $attribute
+     * @param  string|null  $value
      * @return void
      */
     protected function setDateAttribute($attribute, $value)
@@ -22,7 +22,7 @@ trait HasMonthYearDates
     /**
      * Accessor for getting the date attribute.
      *
-     * @param string|null $attribute
+     * @param  string|null  $attribute
      * @return string|null
      */
     protected function getDateAttribute($attribute)
@@ -33,9 +33,8 @@ trait HasMonthYearDates
     /**
      * Scope for filtering by month and year.
      *
-     * @param Builder $query
-     * @param string $attribute
-     * @param string|null $value
+     * @param  string  $attribute
+     * @param  string|null  $value
      * @return Builder
      */
     public function scopeWhereMonthYear(Builder $query, $attribute, $value)

@@ -11,7 +11,6 @@ trait UsesMonthYearDates
     /**
      * Configure date picker for month and year format.
      *
-     * @param Forms\Components\DatePicker $datePicker
      * @return Forms\Components\DatePicker
      */
     protected function configureMonthYearDatePicker(Forms\Components\DatePicker $datePicker)
@@ -22,8 +21,7 @@ trait UsesMonthYearDates
     /**
      * Configure table column for month and year format.
      *
-     * @param Tables\Columns\TextColumn $textColumn
-     * @param string $attribute
+     * @param  string  $attribute
      * @return Tables\Columns\TextColumn
      */
     protected function configureMonthYearTextColumn(Tables\Columns\TextColumn $textColumn, $attribute)
@@ -36,9 +34,8 @@ trait UsesMonthYearDates
     /**
      * Scope for filtering by month and year in table.
      *
-     * @param Tables\Columns\TextColumn $textColumn
-     * @param string $attribute
-     * @param string|null $value
+     * @param  string  $attribute
+     * @param  string|null  $value
      * @return void
      */
     protected function applyMonthYearTableFilter(Tables\Columns\TextColumn $textColumn, $attribute, $value)
@@ -47,6 +44,7 @@ trait UsesMonthYearDates
             if ($value) {
                 return $query->where(DB::raw('DATE_FORMAT('.$attribute.', "%Y-%m")'), $value);
             }
+
             return $query;
         });
     }
