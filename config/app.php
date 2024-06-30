@@ -147,4 +147,36 @@ return [
 
     'date_format' => 'Y-m-d',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Trusted Proxies
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the trusted proxies used throughout
+    | application and in the API responses.
+    |
+    */
+
+    'trust_proxies' => [
+        ...array_filter(
+            explode(',', env('TRUST_PROXIES', ''))
+        ),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Trusted Hosts
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the trusted hosts used throughout
+    | application and in the API responses.
+    |
+    */
+
+    'trust_hosts' => [
+        ...array_filter(
+            explode(',', env('TRUST_HOSTS', ''))
+        ),
+    ],
+
 ];
