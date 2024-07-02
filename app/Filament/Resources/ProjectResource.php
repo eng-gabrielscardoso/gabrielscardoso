@@ -41,7 +41,7 @@ class ProjectResource extends Resource
                     ->required()
                     ->autosize()
                     ->minLength(3)
-                    ->maxLength(1024)
+                    ->maxLength(1024 * 2)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
                     ->required()
