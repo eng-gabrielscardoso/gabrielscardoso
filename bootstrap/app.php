@@ -11,8 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustHosts(at: config('app.trust_hosts'));
-        $middleware->trustProxies(at: config('app.trusted_proxies'));
+        if (getenv('APP_ENV') === 'production') {
+            $middleware->trustHosts(at: config('app.trust_hosts'));
+            $middleware->trustProxies(at: config('app.trusted_proxies'));
+        } else {
+            $middleware->trustHosts(at: ['laravel.test']);
+            $middleware->trustProxies(at: '*');
+        }
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
