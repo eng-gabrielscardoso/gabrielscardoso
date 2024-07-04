@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [0.0.3](https://github.com/eng-gabrielscardoso/gabrielscardoso/compare/v0.0.2...v0.0.3) (2024-07-04)
+
+### Bug Fixes
+
+* Runtime bad execution ([bd8a3a](https://github.com/eng-gabrielscardoso/gabrielscardoso/commit/bd8a3a1d9566f36644a6da5d31b00d3e496d8901))
+
+
+---
+
 ## [0.0.2](https://github.com/eng-gabrielscardoso/gabrielscardoso/compare/v0.0.1...v0.0.2) (2024-06-30)
 
 ### Features
