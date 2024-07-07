@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -17,7 +18,11 @@ class SitemapGenerator
         foreach ($routes as $route) {
             if (in_array('GET', $route->methods()) && $this->routeInWebFile($route)) {
                 $uri = $route->uri();
-                $sitemap->add(Url::create($uri));
+                $sitemap->add(Url::create($uri)
+                    ->setLastModificationDate(Carbon::now())
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                    ->setPriority(0.1)
+                );
             }
         }
 
