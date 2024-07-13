@@ -21,21 +21,10 @@
             </div>
         </div>
         <article class="prose-sm">
-            <h3>Languages and preprocessors</h3>
-            <img src="https://go-skill-icons.vercel.app/api/icons?i=bash,bootstrap,css,elixir,go,html,java,js,less,php,py,sass,solidity,tailwind,ts"
-                alt="Languages and preprocessors"/>
-            <h3>Frameworks and libs</h3>
-            <img src="https://go-skill-icons.vercel.app/api/icons?i=adonis,angular,astro,alpinejs,filament,jest,laravel,livewire,breeze,cashier,echo,envoyer,forge,inertia,jetstream,nova,pint,prompts,sail,sanctum,socialite,telescope,vapor,nestjs,nodejs,nuxtjs,pinia,vite,vitest,vue"
-                alt="Frameworks and libs"/>
-            <h3>Database/ORMs and Cloud services</h3>
-            <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,digitalocean,firebase,gcp,heroku,mongodb,mysql,netlify,nginx,postgresql,prisma,redis,supabase,sqlite,vercel"
-                alt="Database/ORMs and Cloud Services"/>
-            <h3>Tools and more</h3>
-            <img src="https://go-skill-icons.vercel.app/api/icons?i=dbeaver,discord,docker,figma,gimp,github,githubactions,googleanalytics,insomnia,pnpm,linux,md,npm,vscode,yarn"
-                alt="Tools and more" class="py-1" />
-            <h3>Stu(dying) amd interest</h3>
-            <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,azure,bun,chatgpt,codeigniter,elixir,gcp,gemini,go,js,php,spring,solidity,solidjs,svelte"
-                alt="Stu(dying) and interests" class="py-1" />
+            @foreach ($skills as $skill)
+                <h3>{{ $skill->name }}</h3>
+                <img src="{{ config('app.skills_icon_api_url') }}{{ $skill->skills }}" alt="{{ $skill->description }}" />
+            @endforeach
         </article>
     </div>
 </div>

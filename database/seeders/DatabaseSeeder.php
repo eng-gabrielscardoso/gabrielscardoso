@@ -6,6 +6,7 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Message;
 use App\Models\Project;
+use App\Models\Skill;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -30,5 +31,7 @@ class DatabaseSeeder extends Seeder
         Project::factory()->count(6)->create();
 
         Message::factory()->count(50)->create();
+
+        Skill::factory()->count(4)->create();
     }
 }
