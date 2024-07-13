@@ -2,9 +2,9 @@
 
 namespace App\Filament\Widgets;
 
-use Filament\Widgets\Widget;
 use App\Services\SitemapGenerator;
 use Filament\Notifications\Notification;
+use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Log;
 
 class GenerateSitemap extends Widget
