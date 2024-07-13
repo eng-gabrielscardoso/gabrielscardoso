@@ -190,4 +190,16 @@ return [
     */
 
     'skills_icon_api_url' => env('SKILLS_ICON_API_URL', 'https://go-skill-icons.vercel.app/api'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Skills Icon Repository URL
+    |--------------------------------------------------------------------------
+    |
+    | This configuration option determines the Repository URL used throughout the skills
+    | icon API version used in application.
+    |
+    */
+
+    'skills_icon_repository_url' => env('SKILLS_ICON_REPOSITORY_URL', 'https://github.com/MarcelDekker/go-skill-icons'),
 ];
