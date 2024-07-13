@@ -179,4 +179,15 @@ return [
         ),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Skills Icon API URL
+    |--------------------------------------------------------------------------
+    |
+    | This configuration option determines the API URL used throughout the skills
+    | icon API version used in application.
+    |
+    */
+
+    'skills_icon_api_url' => env('SKILLS_ICON_API_URL', 'https://go-skill-icons.vercel.app/api'),
 ];
