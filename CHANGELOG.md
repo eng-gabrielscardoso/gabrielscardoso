@@ -4,6 +4,11 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [0.0.4](https://github.com/eng-gabrielscardoso/gabrielscardoso/compare/v0.0.3...v0.0.4) (2024-07-13)
+
+
+---
+
 ## [0.0.3](https://github.com/eng-gabrielscardoso/gabrielscardoso/compare/v0.0.2...v0.0.3) (2024-07-04)
 
 ### Bug Fixes
