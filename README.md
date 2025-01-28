@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>G. S. Cardoso Personal Portfolio</h1>
+<h1>Gabriel Santos Cardoso Personal Portfolio</h1>
 
 <img src="https://go-skill-icons.vercel.app/api/icons?i=php,laravel,tailwind,livewire,filament,pint,mysql,nginx,docker,digitalocean,cloudflare,github,githubactions,linux,vscode" alt="Tech specification" />
 
