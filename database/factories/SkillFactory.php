@@ -57,7 +57,7 @@ class SkillFactory extends Factory
         return [
             'name' => $this->faker->sentence(3),
             'description' => $this->faker->sentence(),
-            'skills' => implode(",", $this->faker->randomElements($skills, 15))
+            'skills' => implode(',', $this->faker->randomElements($skills, 15)),
         ];
     }
 }
