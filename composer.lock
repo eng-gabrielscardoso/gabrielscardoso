@@ -3480,16 +3480,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.5.2",
+            "version": "v3.5.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "636725c1f87bc7844dd80277488268db27eec1aa"
+                "reference": "62f0fa6b340a467c25baa590a567d9a134b357da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/636725c1f87bc7844dd80277488268db27eec1aa",
-                "reference": "636725c1f87bc7844dd80277488268db27eec1aa",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/62f0fa6b340a467c25baa590a567d9a134b357da",
+                "reference": "62f0fa6b340a467c25baa590a567d9a134b357da",
                 "shasum": ""
             },
             "require": {
@@ -3497,6 +3497,7 @@
                 "illuminate/routing": "^10.0|^11.0",
                 "illuminate/support": "^10.0|^11.0",
                 "illuminate/validation": "^10.0|^11.0",
+                "laravel/prompts": "^0.1.24|^0.2|^0.3",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
                 "symfony/console": "^6.0|^7.0",
@@ -3505,7 +3506,6 @@
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
                 "laravel/framework": "^10.15.0|^11.0",
-                "laravel/prompts": "^0.1.6",
                 "mockery/mockery": "^1.3.1",
                 "orchestra/testbench": "^8.21.0|^9.0",
                 "orchestra/testbench-dusk": "^8.24|^9.1",
@@ -3515,12 +3515,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Livewire\\LivewireServiceProvider"
-                    ],
                     "aliases": {
                         "Livewire": "Livewire\\Livewire"
-                    }
+                    },
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -3544,7 +3544,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.5.2"
+                "source": "https://github.com/livewire/livewire/tree/v3.5.18"
             },
             "funding": [
                 {
@@ -3552,26 +3552,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-03T17:22:45+00:00"
+            "time": "2024-12-23T15:05:02+00:00"
         },
         {
             "name": "masmerise/livewire-toaster",
-            "version": "2.2.1",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/masmerise/livewire-toaster.git",
-                "reference": "6a610413da47ea6306afc1bce35d1dbe19a15ea2"
+                "reference": "9dc12004756eb1183c485a77fc5edf7bee3ec8e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/masmerise/livewire-toaster/zipball/6a610413da47ea6306afc1bce35d1dbe19a15ea2",
-                "reference": "6a610413da47ea6306afc1bce35d1dbe19a15ea2",
+                "url": "https://api.github.com/repos/masmerise/livewire-toaster/zipball/9dc12004756eb1183c485a77fc5edf7bee3ec8e6",
+                "reference": "9dc12004756eb1183c485a77fc5edf7bee3ec8e6",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^11.0",
                 "livewire/livewire": "^3.0",
-                "php": "~8.3"
+                "php": "~8.2|~8.3|~8.4"
             },
             "conflict": {
                 "stevebauman/unfinalize": "*"
@@ -3621,9 +3621,9 @@
             ],
             "support": {
                 "issues": "https://github.com/masmerise/livewire-toaster/issues",
-                "source": "https://github.com/masmerise/livewire-toaster/tree/2.2.1"
+                "source": "https://github.com/masmerise/livewire-toaster/tree/2.6.0"
             },
-            "time": "2024-04-09T10:51:09+00:00"
+            "time": "2024-12-01T11:27:35+00:00"
         },
         {
             "name": "masterminds/html5",
