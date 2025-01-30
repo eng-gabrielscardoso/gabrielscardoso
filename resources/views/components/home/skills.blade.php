@@ -1,5 +1,5 @@
-<div class="w-full bg-base-300 px-4 py-12 flex justify-center items-center">
-    <div class="container flex flex-col md:flex-row items-center gap-4">
+<div class="flex items-center justify-center w-full px-4 py-12 bg-base-300">
+    <div class="container flex flex-col items-center gap-4 md:flex-row">
         <div class="flex flex-col gap-4">
             <article class="prose lg:prose-xl">
                 <h2>

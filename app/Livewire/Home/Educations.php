@@ -21,6 +21,6 @@ class Educations extends Component
 
     public function mount()
     {
-        $this->educations = Education::orderBy('end_date')->get();
+        $this->educations = Education::orderBy('end_date', 'desc')->get();
     }
 }
