@@ -1,12 +1,12 @@
 <div class="flex flex-col items-center">
     <div
-        class="relative p-4 h-full min-h-screen w-full flex flex-col md:flex-row items-center justify-center gap-4 bg-home-hero bg-cover bg-center">
-        <div class="w-full md:w-1/2 flex flex-col gap-4">
-            <article class="prose lg:prose-xl text-center">
+        class="relative flex flex-col items-center justify-center w-full h-full min-h-screen gap-4 p-4 bg-center bg-cover md:flex-row bg-home-hero">
+        <div class="flex flex-col w-full gap-4 md:w-1/2">
+            <article class="prose text-center lg:prose-xl">
                 <div class="avatar">
                     <figure
-                        class="w-60 h-60 relative rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 rounded-full">
-                        <span class="absolute top-0 right-16 w-4 h-4 rounded-full bg-success animate-pulse"></span>
+                        class="relative rounded-full w-60 h-60 ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <span class="absolute top-0 w-4 h-4 rounded-full right-16 bg-success animate-pulse"></span>
                         <img src="https://pt.gravatar.com/userimage/199484219/012c5298d952c34d6699a3d280e3a4f3.png?size=350"
                             class="rounded-full" />
                     </figure>
@@ -24,8 +24,8 @@
                 <pre class="text-secondary"><code>Interests: AI, Blockchain, Web3 and disruptive technologies.</code></pre>
             </div>
         </div>
-        <div class="card w-full md:w-1/2 bg-base-100 shadow-xl">
-            <div class="card-body items-center">
+        <div class="w-full shadow-xl card md:w-1/2 bg-base-100">
+            <div class="items-center card-body">
                 <h2 class="card-title">About Me</h2>
                 <article class="prose lg:prose-xl">
                     <p>
@@ -45,7 +45,7 @@
                         such as Git, and have a strong ability to troubleshoot and debug applications.
                     </p>
                 </article>
-                <div class="card-actions justify-end">
+                <div class="justify-end card-actions">
                     <button type="button" autofocus class="btn btn-primary" wire:click="redirectToContact">Let's get in
                         touch!</button>
                 </div>

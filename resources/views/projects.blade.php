@@ -1,11 +1,11 @@
 <div class="flex flex-col items-center">
     <div
-        class="p-4 h-full min-h-screen w-full flex flex-col items-center justify-center gap-4 bg-home-hero bg-cover bg-center">
-        <article class="prose lg:prose-xl text-center">
+        class="flex flex-col items-center justify-center w-full h-full min-h-screen gap-4 p-4 bg-center bg-cover bg-home-hero">
+        <article class="prose text-center lg:prose-xl">
             <div class="avatar">
                 <figure
-                    class="w-60 h-60 relative rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <span class="absolute top-0 right-16 w-4 h-4 rounded-full bg-success animate-pulse"></span>
+                    class="relative rounded-full w-60 h-60 ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <span class="absolute top-0 w-4 h-4 rounded-full right-16 bg-success animate-pulse"></span>
                     <img src="https://pt.gravatar.com/userimage/199484219/012c5298d952c34d6699a3d280e3a4f3.png?size=350"
                         class="rounded-full" />
                 </figure>
@@ -17,10 +17,10 @@
             </h1>
         </article>
     </div>
-    <div class="w-full flex flex-col gap-4">
+    <div class="flex flex-col w-full gap-4">
         @foreach ($projects as $index => $project)
-            <div class="p-4 flex flex-col md:flex-row items-center justify-center gap-4">
-                <article class="w-full md:w-1/2 prose lg:prose-xl">
+            <div class="flex flex-col items-center justify-center gap-4 p-4 md:flex-row">
+                <article class="w-full prose md:w-1/2 lg:prose-xl">
                     <h2>
                         <span class="badge badge-accent badge-lg"></span>
                         {{ $project->title }}
@@ -32,7 +32,7 @@
                         {{ $project->description }}
                     </p>
                     <a href="{{ $project->link }}" target="_blank" rel="noopener noreferrer"
-                        class="font-bold no-underline hover:text-secondary transition-colors">
+                        class="font-bold no-underline transition-colors hover:text-secondary">
                         View Project <i class="fa-solid fa-arrow-right text-accent"></i>
                     </a>
                 </article>

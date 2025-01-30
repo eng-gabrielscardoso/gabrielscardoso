@@ -9,7 +9,7 @@
         </x-slot>
 
         <x-filament::card>
-            <div class="flex justify-between items-center gap-2">
+            <div class="flex items-center justify-between gap-2">
                 @if (file_exists(public_path('sitemap.xml')))
                     <strong>Sitemap created</strong>
                 @else
