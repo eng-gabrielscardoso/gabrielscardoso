@@ -44,7 +44,7 @@ class EducationResource extends Resource
                     ->required()
                     ->autosize()
                     ->minLength(3)
-                    ->maxLength(1000)
+                    ->maxLength(1020)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
                     ->required()

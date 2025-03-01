@@ -32,7 +32,7 @@ class SkillResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('skills')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(765)
                     ->helperText("Please include the skills separated by comma e.g. `rabbitmq,kafka`. To see the complete list of available icon skills, please visit: {$repositoryLink}"),
             ]);
     }
