@@ -11,13 +11,19 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/contact" wire:navigate>
+                        <i class="fa-solid fa-phone"></i> Contact
+                    </a>
+                </li>
+                <li>
                     <a href="/projects" wire:navigate>
                         <i class="fa-solid fa-diagram-project"></i> Projects
                     </a>
                 </li>
                 <li>
-                    <a href="/contact" wire:navigate>
-                        <i class="fa-solid fa-phone"></i> Contact
+                    <a href="https://docs.google.com/document/d/1EvVSbMeTdvUtCpKST2wvGxHHWQGqKc-jENxbGqKA1j4"
+                        target="_blank">
+                        <i class="fa-regular fa-file"></i> Cover letter
                     </a>
                 </li>
                 <li>
