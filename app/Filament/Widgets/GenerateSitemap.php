@@ -14,7 +14,7 @@ class GenerateSitemap extends Widget
     public function generateSitemap()
     {
         try {
-            $sitemapGenerator = new SitemapGenerator();
+            $sitemapGenerator = new SitemapGenerator;
 
             $sitemapGenerator->generate();
 
