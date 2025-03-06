@@ -23,6 +23,6 @@ class Projects extends Component
 
     public function mount()
     {
-        $this->projects = Project::orderBy('end_date', 'desc')->get();
+        $this->projects = Project::orderBy('start_date', 'desc')->get();
     }
 }
