@@ -53,7 +53,7 @@ class ProjectResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->required()
                     ->directory('projects')
-                    ->maxSize(1024)
+                    ->maxSize(1024 * 5)
                     ->maxFiles(1)
                     ->image()
                     ->imageEditor()
