@@ -12,8 +12,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         if (getenv('APP_ENV') === 'production') {
-            $middleware->trustHosts(at: config('app.trust_hosts'));
-            $middleware->trustProxies(at: config('app.trust_proxies'));
+            $middleware->trustHosts(at: explode(',', env('TRUST_PROXIES', '')));
+            $middleware->trustProxies(at: explode(',', env('TRUST_HOSTS', '')));
         } else {
             $middleware->trustHosts(at: ['laravel.test']);
             $middleware->trustProxies(at: '*');
