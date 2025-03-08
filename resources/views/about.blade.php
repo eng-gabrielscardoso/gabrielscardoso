@@ -4,7 +4,8 @@
         <div class="flex flex-col w-full gap-4 md:w-1/2">
             <article class="prose text-center lg:prose-xl">
                 <div class="avatar">
-                    <figure class="relative rounded-full w-60 h-60 ring-3 ring-primary ring-offset-base-100 ring-offset-2">
+                    <figure
+                        class="relative rounded-full w-60 h-60 ring-3 ring-primary ring-offset-base-100 ring-offset-2">
                         <span class="absolute top-0 w-4 h-4 rounded-full right-16 bg-success animate-pulse"></span>
                         <img src="https://pt.gravatar.com/userimage/199484219/012c5298d952c34d6699a3d280e3a4f3.png?size=350"
                             class="rounded-full" />
@@ -16,11 +17,13 @@
             </article>
             <div class="mockup-code">
                 <pre data-prefix="$"><code>info Gabe | head</code></pre>
-                <pre class="text-secondary"><code>File: Gabe.info, Node: Invoking find, Next: Invoking locate, Up: Reference</code></pre>
+                <pre
+                    class="text-secondary"><code>File: Gabe.info, Node: Invoking find, Next: Invoking locate, Up: Reference</code></pre>
                 <pre class="text-secondary"><code>1.1 Invoking 'Gabe'</code></pre>
                 <pre class="text-secondary"><code>===================</code></pre>
                 <pre class="text-secondary"><code>'Gabe', Full Stack Developer, located in Brazil.</code></pre>
-                <pre class="text-secondary"><code>Interests: AI, Blockchain, Web3 and disruptive technologies.</code></pre>
+                <pre
+                    class="text-secondary"><code>Interests: AI, Blockchain, Web3 and disruptive technologies.</code></pre>
             </div>
         </div>
         <div class="w-full shadow-xl card md:w-1/2 bg-base-100">
