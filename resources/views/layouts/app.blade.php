@@ -45,10 +45,10 @@
         <main>
             {{ $slot }}
         </main>
-        <livewire:common.footer>
+    <livewire:common.footer>
 
-            {{-- toaster component --}}
-            <x-toaster-hub />
+    {{-- toaster component --}}
+    <x-toaster-hub />
 </body>
 
 </html>

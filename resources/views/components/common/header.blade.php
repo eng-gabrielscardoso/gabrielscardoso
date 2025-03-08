@@ -4,7 +4,7 @@
             <button role="button" class="cursor-pointer btn btn-ghost btn-circle">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-sm bg-base-100 rounded-box w-52">
+            <ul tabindex="0" class="p-2 mt-3 shadow-sm menu menu-sm dropdown-content z-1 bg-base-100 rounded-box w-52">
                 <li>
                     <a href="/about" wire:navigate>
                         <i class="fa-solid fa-circle-info"></i> About

@@ -3,8 +3,7 @@
         class="flex flex-col items-center justify-center w-full h-full min-h-screen gap-4 p-4 bg-center bg-cover bg-home-hero">
         <article class="prose text-center lg:prose-xl">
             <div class="avatar">
-                <figure
-                    class="relative rounded-full w-60 h-60 ring-3 ring-primary ring-offset-base-100 ring-offset-2">
+                <figure class="relative rounded-full w-60 h-60 ring-3 ring-primary ring-offset-base-100 ring-offset-2">
                     <span class="absolute top-0 w-4 h-4 rounded-full right-16 bg-success animate-pulse"></span>
                     <img src="https://pt.gravatar.com/userimage/199484219/012c5298d952c34d6699a3d280e3a4f3.png?size=350"
                         class="rounded-full" />
@@ -39,7 +38,8 @@
                 <div class="w-full md:w-1/2">
                     <div class="mockup-window rounded-lg bg-base-300 w-full max-w-[1024px] h-full max-h-[576px]">
                         <figure>
-                            <img src="{{ $project->image ? Storage::url($project->image) : 'images/seo-image.webp' }}" alt="Project Overview" width="1024" height="576" class="bg-cover">
+                            <img src="{{ $project->image ? Storage::url($project->image) : 'images/seo-image.webp' }}"
+                                alt="Project Overview" width="1024" height="576" class="bg-cover">
                         </figure>
                     </div>
                 </div>
