@@ -12,7 +12,7 @@
                         {{ $experience->start_date->format('M Y') }} to
                         {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Present' }}</span>
                     <br>
-                    <p class="overflow-y-scroll">{{ $experience->description }}</p>
+                    <div class="overflow-y-scroll">{!! $experience->description !!}</div>
                 </div>
             </div>
         @endforeach

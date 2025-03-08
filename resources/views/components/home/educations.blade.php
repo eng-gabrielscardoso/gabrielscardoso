@@ -13,7 +13,7 @@
                         {{ $education->end_date ? $education->end_date->format('M Y') : 'Present' }}
                     </span>
                     <br>
-                    <p class="overflow-y-scroll">{{ $education->description }}</p>
+                    <div class="overflow-y-scroll">{!! $education->description !!}</div>
                 </div>
             </div>
         @endforeach

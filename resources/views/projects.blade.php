@@ -27,9 +27,9 @@
                     <span class="text-secondary">
                         {{ $project->association }}
                     </span>
-                    <p>
-                        {{ $project->description }}
-                    </p>
+                    <div>
+                        {!! $project->description !!}
+                    </div>
                     <a href="{{ $project->link }}" target="_blank" rel="noopener noreferrer"
                         class="font-bold no-underline transition-colors hover:text-secondary">
                         View Project <i class="fa-solid fa-arrow-right text-accent"></i>

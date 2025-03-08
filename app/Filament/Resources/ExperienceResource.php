@@ -27,6 +27,7 @@ class ExperienceResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->autofocus()
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
@@ -41,11 +42,10 @@ class ExperienceResource extends Resource
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
-                    ->autosize()
                     ->minLength(3)
-                    ->maxLength(1024 * 2)
+                    ->maxLength(1024 * 5)
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('start_date')
                     ->required()
