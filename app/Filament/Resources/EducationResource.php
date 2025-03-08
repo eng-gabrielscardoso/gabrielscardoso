@@ -26,6 +26,7 @@ class EducationResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('degree')
+                    ->autofocus()
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),

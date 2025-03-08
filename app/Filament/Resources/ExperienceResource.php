@@ -27,6 +27,7 @@ class ExperienceResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->autofocus()
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),

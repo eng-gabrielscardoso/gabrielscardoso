@@ -26,6 +26,7 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->autofocus()
                     ->required()
                     ->minLength(1)
                     ->maxLength(255)
