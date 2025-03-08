@@ -31,7 +31,7 @@
                     <div class="divider md:divider-horizontal">Or</div>
                     <form wire:submit="sendMessage" class="flex flex-col items-center w-full gap-4 md:w-1/2">
                         <div class="w-full">
-                            <label class="flex items-center gap-2 input input-bordered">
+                            <label class="flex items-center w-full gap-2 input input-bordered">
                                 <i class="fa-solid fa-signature"></i>
                                 <input type="text" required class="grow" placeholder="Name" wire:model="name" />
                             </label>
@@ -40,7 +40,7 @@
                             @enderror
                         </div>
                         <div class="w-full">
-                            <label class="flex items-center gap-2 input input-bordered">
+                            <label class="flex items-center w-full gap-2 input input-bordered">
                                 <i class="fa-regular fa-envelope"></i>
                                 <input type="email" required class="grow" placeholder="Email" wire:model="email" />
                             </label>
@@ -49,25 +49,25 @@
                             @enderror
                         </div>
                         <div class="w-full">
-                            <label class="flex items-center gap-2 input input-bordered">
+                            <label class="flex items-center w-full gap-2 input input-bordered">
                                 <i class="fa-solid fa-quote-left"></i>
-                                <input type="text" required class="grow" placeholder="Subject"
-                                    wire:model="subject" />
+                                <input type="text" required class="grow" placeholder="Subject" wire:model="subject" />
                             </label>
                             @error('subject')
                                 <span class="text-sm text-error">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="w-full">
+                        <div class="justify-center w-full">
                             <label class="form-control">
-                                <textarea class="h-24 textarea textarea-bordered" placeholder="Write your thoughts..." wire:model="message"></textarea>
+                                <textarea class="w-full h-24 textarea textarea-bordered" placeholder="Write your thoughts..."
+                                    wire:model="message"></textarea>
                             </label>
                             @error('message')
                                 <span class="text-sm text-error">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="justify-center card-actions">
-                            <button type="submit" autofocus class="btn btn-primary">
+                        <div class="w-full">
+                            <button type="submit" autofocus class="w-full btn btn-primary">
                                 <div wire:loading.remove>
                                     <i class="fa-regular fa-paper-plane"></i>
                                     <span>Send message!</span>
