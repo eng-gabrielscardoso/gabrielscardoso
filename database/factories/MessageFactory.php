@@ -19,6 +19,8 @@ class MessageFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->email(),
+            'subject' => $this->faker->sentence(),
+            'message' => $this->faker->text(),
             'next_message_at' => $this->faker->dateTimeBetween('now', '+1 week'),
         ];
     }
