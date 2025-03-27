@@ -2,10 +2,8 @@
 
 namespace App\Livewire;
 
-use App\Mail\ContactMessage;
 use App\Models\Message;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -38,19 +36,18 @@ class Contact extends Component
         $performer = Message::where('email', $this->email)->first();
 
         if (isset($performer) && $performer->next_message_at > now()) {
-            Toaster::warning('Unfortunately our developer does not have enough budget so please wait a day to send a new message');
+            Toaster::warning('Calm down champs, wait a little to send a new message.');
 
             return;
         }
 
         try {
-            Mail::to(config('mail.from.address'))
-                ->send(new ContactMessage($this->name, $this->email, $this->subject, $this->message));
-
             Message::create([
                 'name' => $this->name,
                 'email' => $this->email,
-                'next_message_at' => now()->addDay(),
+                'subject' => $this->subject,
+                'message' => $this->message,
+                'next_message_at' => now()->addHour(),
             ]);
 
             Toaster::success('Message sent successfully!');
