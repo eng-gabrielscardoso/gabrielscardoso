@@ -5,7 +5,7 @@
             <div class="avatar">
                 <figure class="relative rounded-full w-60 h-60 ring-3 ring-primary ring-offset-base-100 ring-offset-2">
                     <span class="absolute top-0 w-4 h-4 rounded-full right-16 bg-success animate-pulse"></span>
-                    <img src="https://pt.gravatar.com/userimage/199484219/012c5298d952c34d6699a3d280e3a4f3.png?size=350"
+                    <img src="https://https://gravatar.com/avatar/155573459f38b755aef7215ac4cc56ac?size=350"
                         class="rounded-full" />
                 </figure>
             </div>
