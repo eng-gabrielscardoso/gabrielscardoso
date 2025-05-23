@@ -48,6 +48,8 @@
 </head>
 
 <body data-theme="business" class="scrollbar-custom">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3NL6MVR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <noscript>
         <div role="alert" class="alert alert-warning">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current shrink-0" fill="none"
