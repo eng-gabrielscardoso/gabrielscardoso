@@ -25,10 +25,10 @@ class SecurityHeaders
 
         if (app()->environment('production')) {
             $csp = "default-src 'self'; ".
-                "script-src 'self' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
-                "style-src 'self' https://fonts.googleapis.com; ".
+                "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
+                "style-src 'self' 'unsafe-inline' https://*.googleapis.com; ".
                 "img-src 'self' data: https://*.googletagmanager.com https://*.clarity.ms https://gravatar.com https://go-skill-icons.vercel.app https://*.bing.com https://img.shields.io; ".
-                "font-src 'self' https://fonts.gstatic.com https://*.fontawesome.com; ".
+                "font-src 'self' https://*.gstatic.com https://*.fontawesome.com; ".
                 "connect-src 'self' https://*.clarity.ms https://*.livewire.io https://*.fontawesome.com; ".
                 'frame-src https://*.googletagmanager.com; '.
                 "object-src 'none'; ".
