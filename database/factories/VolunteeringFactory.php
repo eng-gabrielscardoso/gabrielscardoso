@@ -18,11 +18,19 @@ class VolunteeringFactory extends Factory
      */
     public function definition(): array
     {
+        $jobTitles = [
+            'Software Engineer',
+            'Full Stack Developer',
+            'Data Analyst',
+            'Product Manager',
+            'Business Analyst',
+        ];
+
         $start_date = Carbon::create($this->faker->date());
 
         return [
             'organisation' => $this->faker->company,
-            'role' => $this->faker->jobTitle,
+            'role' => $this->faker->randomElement($jobTitles),
             'cause' => $this->faker->randomElement(array: CauseType::values()),
             'description' => $this->faker->paragraph,
             'start_date' => $start_date,
