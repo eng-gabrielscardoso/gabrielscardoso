@@ -30,7 +30,7 @@
             <div class="items-center card-body">
                 <h2 class="card-title">About Me</h2>
                 <article class="prose lg:prose-xl">
-                    {{ $biography }}
+                    {!! $biography !!}
                 </article>
                 <div class="justify-end card-actions">
                     <button type="button" autofocus class="btn btn-primary" wire:click="redirectToContact">Let's get in
