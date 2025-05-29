@@ -30,19 +30,7 @@
             <div class="items-center card-body">
                 <h2 class="card-title">About Me</h2>
                 <article class="prose lg:prose-xl">
-                    <p>
-                        Hello, I'm Gabriel Santos Cardoso, a passionate Full Stack Developer based in Brazil. I'm always
-                        open to new opportunities—whether to discuss business, collaborate on projects, or simply
-                        exchange ideas with like-minded professionals. Feel free to reach out! </p>
-                    <p>
-                        With a strong background in both front-end and back-end development, I specialise in building
-                        scalable and efficient web applications. My expertise spans modern frameworks, responsive
-                        design, and cloud-based deployments, allowing me to deliver innovative solutions that drive
-                        business success. </p>
-                    <p>
-                        I have hands-on experience in software architecture, application deployment, and performance
-                        optimization. I excel at troubleshooting,
-                        debugging, and ensuring seamless user experiences across diverse platforms. </p>
+                    {{ $biography }}
                 </article>
                 <div class="justify-end card-actions">
                     <button type="button" autofocus class="btn btn-primary" wire:click="redirectToContact">Let's get in
