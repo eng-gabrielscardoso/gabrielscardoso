@@ -1,6 +1,6 @@
 <section class="flex flex-col items-center w-full gap-4">
     <article class="w-full prose lg:prose-xl">
-        <h2 class="text-center text-primary">Experiences</h2>
+        <h2 class="text-center text-primary"><i class="fa-solid fa-user-tie"></i> Experiences</h2>
     </article>
     <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
         @foreach ($experiences as $experience)
