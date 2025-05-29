@@ -25,9 +25,9 @@ class SecurityHeaders
 
         if (app()->environment('production')) {
             $csp = "default-src 'self'; ".
-                "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
+                "script-src 'self' blob: 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
                 "style-src 'self' 'unsafe-inline' https://*.googleapis.com; ".
-                "img-src 'self' data: https://*.googletagmanager.com https://*.clarity.ms https://gravatar.com https://go-skill-icons.vercel.app https://*.bing.com https://img.shields.io; ".
+                "img-src 'self' data: blob: https://*.googletagmanager.com https://*.clarity.ms https://*.gravatar.com https://go-skill-icons.vercel.app https://*.bing.com https://img.shields.io; ".
                 "font-src 'self' https://*.gstatic.com https://*.fontawesome.com; ".
                 "connect-src 'self' https://*.clarity.ms https://*.livewire.io https://*.fontawesome.com; ".
                 'frame-src https://*.googletagmanager.com; '.
@@ -37,9 +37,9 @@ class SecurityHeaders
                 "frame-ancestors 'self';";
         } else {
             $csp = "default-src 'self'; ".
-                "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com http://localhost:* https://localhost:*; ".
+                "script-src 'self' blob: 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com http://localhost:* https://localhost:*; ".
                 "style-src 'self' 'unsafe-inline' https://*.googleapis.com http://localhost:* https://localhost:*; ".
-                "img-src 'self' data: https://*.googletagmanager.com https://*.clarity.ms ws://localhost:* wss://localhost:* http://localhost:* https://localhost:* https://gravatar.com https://go-skill-icons.vercel.app https://*.bing.com https://img.shields.io; ".
+                "img-src 'self' data: blob: https://*.googletagmanager.com https://*.clarity.ms ws://localhost:* wss://localhost:* http://localhost:* https://localhost:* https://*.gravatar.com https://go-skill-icons.vercel.app https://*.bing.com https://img.shields.io; ".
                 "font-src 'self' https://*.gstatic.com https://*.fontawesome.com; ".
                 "connect-src 'self' ws://localhost:* wss://localhost:* http://localhost:* https://localhost:* https://*.clarity.ms https://*.livewire.io https://*.fontawesome.com; ".
                 'frame-src https://*.googletagmanager.com; '.
