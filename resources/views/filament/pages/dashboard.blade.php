@@ -4,4 +4,6 @@
     </div>
 
     @livewire(\App\Filament\Widgets\GenerateSitemap::class)
+
+    @livewire(\App\Filament\Widgets\BiographySection::class)
 </x-filament-panels::page>
