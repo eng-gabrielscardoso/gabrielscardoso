@@ -16,6 +16,24 @@
             </h1>
         </article>
     </div>
+    <div class="flex flex-col items-center justify-center w-full h-full bg-base-200">
+        <div class="stats stats-vertical lg:stats-horizontal container p-4">
+            <div class="stat">
+                <div class="stat-figure text-secondary">
+                    <i class="fa-solid fa-box-archive text-3xl"></i>
+                </div>
+                <div class="stat-title">Total Projects</div>
+                <div class="stat-value">{{ $totalProjects }}</div>
+            </div>
+            <div class="stat">
+                <div class="stat-figure text-secondary">
+                    <i class="fa-solid fa-screwdriver-wrench text-3xl"></i>
+                </div>
+                <div class="stat-title">Active Projects</div>
+                <div class="stat-value">{{ $activeProjects }}</div>
+            </div>
+        </div>
+    </div>
     <div class="flex flex-col w-full gap-4">
         @foreach ($projects as $index => $project)
             <div class="flex flex-col items-center justify-center gap-4 p-4 md:flex-row">

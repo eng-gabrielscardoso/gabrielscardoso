@@ -18,6 +18,8 @@ class Projects extends Component
     {
         return view('projects', [
             'projects' => $this->projects,
+            'totalProjects' => $this->projects ? $this->projects->count() : 0,
+            'activeProjects' => $this->projects ? $this->projects->whereNull('end_date')->count() : 0,
         ]);
     }
 
