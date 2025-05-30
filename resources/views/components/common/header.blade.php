@@ -6,6 +6,11 @@
             </button>
             <ul tabindex="0" class="p-2 mt-3 shadow-sm menu menu-sm dropdown-content z-1 bg-base-100 rounded-box w-52">
                 <li>
+                    <a href="/" wire:navigate>
+                        <i class="fa-solid fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
                     <a href="/about" wire:navigate>
                         <i class="fa-solid fa-circle-info"></i> About
                     </a>
