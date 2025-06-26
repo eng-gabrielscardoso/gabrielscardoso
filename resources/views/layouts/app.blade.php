@@ -63,8 +63,9 @@
 
     {{-- application layout --}}
     <livewire:common.header>
-        <main>
+        <main class="relative">
             {{ $slot }}
+            <livewire:common.buy-me-an-acai>
         </main>
     <livewire:common.footer>
 
