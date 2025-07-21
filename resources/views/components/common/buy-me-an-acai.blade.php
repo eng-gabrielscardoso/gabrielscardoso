@@ -28,7 +28,8 @@
                     factories), below are some details on how you can help.
                 </p>
                 <div class="collapse bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-1" checked="checked" />
+                    <input type="radio" name="bitcoin-payment-details" checked="checked"
+                        aria-label="Collapse Bitcoin Payment Details" />
                     <div class="collapse-title font-semibold"><i class="fa-brands fa-bitcoin"></i> Bitcoin</div>
                     <div class="collapse-content text-sm">
                         Good old Bitcoin. As I mentioned, I live in a country overrun
@@ -43,7 +44,8 @@
                     </div>
                 </div>
                 <div class="collapse bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-1" />
+                    <input type="radio" name="ethereum-payment-details"
+                        aria-label="Collapse Ethereum Payment Details" />
                     <div class="collapse-title font-semibold"><i class="fa-brands fa-ethereum"></i> Ethereum</div>
                     <div class="collapse-content text-sm">
                         Ah, Ethereum. An equally marvellous coin that opened the

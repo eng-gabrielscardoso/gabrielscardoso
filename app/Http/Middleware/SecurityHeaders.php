@@ -22,6 +22,8 @@ class SecurityHeaders
         $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
         $response->headers->set('Permissions-Policy', 'geolocation=(), microphone=()');
+        $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+        $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
 
         if (app()->environment('production')) {
             $csp = "default-src 'self'; ".

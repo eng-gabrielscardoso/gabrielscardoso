@@ -1,7 +1,7 @@
 <div class="fixed z-50 shadow-md navbar bg-base-100 rounded-b-md">
     <div class="navbar-start">
         <div class="dropdown">
-            <button role="button" class="cursor-pointer btn btn-ghost btn-circle">
+            <button role="button" class="cursor-pointer btn btn-ghost btn-circle" aria-label="Header Options Button" title="Header Options Button">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <ul tabindex="0" class="p-2 mt-3 shadow-sm menu menu-sm dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -45,7 +45,7 @@
     </div>
     <div class="navbar-end">
         <a href="https://github.com/eng-gabrielscardoso/gabrielscardoso" target="_blank" rel="noopener noreferrer"
-            class="btn btn-ghost btn-circle">
+            class="btn btn-ghost btn-circle" aria-label="Project GitHub Repository Link">
             <i class="fa-brands fa-github fa-2xl"></i>
         </a>
     </div>
