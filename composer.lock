@@ -4969,16 +4969,16 @@
         },
         {
             "name": "ralphjsmit/laravel-seo",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralphjsmit/laravel-seo.git",
-                "reference": "209e92d795469e3865eaee5da29f663e3c25aa6f"
+                "reference": "c47e8b0ac1f21e079bc223aca9d8f4512c4a498b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralphjsmit/laravel-seo/zipball/209e92d795469e3865eaee5da29f663e3c25aa6f",
-                "reference": "209e92d795469e3865eaee5da29f663e3c25aa6f",
+                "url": "https://api.github.com/repos/ralphjsmit/laravel-seo/zipball/c47e8b0ac1f21e079bc223aca9d8f4512c4a498b",
+                "reference": "c47e8b0ac1f21e079bc223aca9d8f4512c4a498b",
                 "shasum": ""
             },
             "require": {
@@ -5038,9 +5038,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ralphjsmit/laravel-seo/issues",
-                "source": "https://github.com/ralphjsmit/laravel-seo/tree/1.7.0"
+                "source": "https://github.com/ralphjsmit/laravel-seo/tree/1.7.1"
             },
-            "time": "2025-02-25T18:11:33+00:00"
+            "time": "2025-08-28T19:34:21+00:00"
         },
         {
             "name": "ramsey/collection",
