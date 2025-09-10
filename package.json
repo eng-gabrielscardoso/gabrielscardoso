@@ -9,7 +9,7 @@
         "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.1.12",
         "axios": "^1.11.0",
-        "daisyui": "^5.1.7",
+        "daisyui": "^5.1.8",
         "laravel-vite-plugin": "^2.0.1",
         "tailwindcss": "^4.1.12",
         "vite": "^7.1.5"
