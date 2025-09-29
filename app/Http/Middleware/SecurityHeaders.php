@@ -17,15 +17,15 @@ class SecurityHeaders
     {
         $response = $next($request);
 
-        $response->headers->set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
-        $response->headers->set('X-Content-Type-Options', 'nosniff');
-        $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
-        $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
-        $response->headers->set('Permissions-Policy', 'geolocation=(), microphone=()');
-        $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-        $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
-
         if (app()->environment('production')) {
+            $response->headers->set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+            $response->headers->set('X-Content-Type-Options', 'nosniff');
+            $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
+            $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
+            $response->headers->set('Permissions-Policy', 'geolocation=(), microphone=()');
+            $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+            $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
+
             $csp = "default-src 'self'; ".
                 "script-src 'self' blob: 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
                 "style-src 'self' 'unsafe-inline' https://*.googleapis.com; ".
