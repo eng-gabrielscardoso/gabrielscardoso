@@ -2,13 +2,14 @@
 
 namespace App\Livewire\Home;
 
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\Volunteering;
 use Livewire\Component;
 
 class Volunteerings extends Component
 {
     /**
-     * @var \Illuminate\Database\Eloquent\Collection<Volunteering>|null
+     * @var Collection<Volunteering>|null
      */
     public $volunteerings = null;
 

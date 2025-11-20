@@ -2,6 +2,7 @@
 
 namespace App\Filament\Widgets;
 
+use Exception;
 use App\Services\SitemapGenerator;
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 
 class GenerateSitemap extends Widget
 {
-    protected static string $view = 'filament.widgets.generate-sitemap';
+    protected string $view = 'filament.widgets.generate-sitemap';
 
     public function generateSitemap()
     {
@@ -22,7 +23,7 @@ class GenerateSitemap extends Widget
                 ->title('Sitemap generated successfully')
                 ->success()
                 ->send();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error($e->getMessage());
 
             Notification::make()

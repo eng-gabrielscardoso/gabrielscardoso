@@ -2,13 +2,14 @@
 
 namespace App\Livewire\Home;
 
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\Experience;
 use Livewire\Component;
 
 class Experiences extends Component
 {
     /**
-     * @var \Illuminate\Database\Eloquent\Collection<Experience>|null
+     * @var Collection<Experience>|null
      */
     public $experiences = null;
 

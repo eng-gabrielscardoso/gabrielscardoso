@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms;
 use Filament\Tables;
 use Illuminate\Support\Facades\DB;
@@ -11,9 +13,9 @@ trait UsesMonthYearDates
     /**
      * Configure date picker for month and year format.
      *
-     * @return Forms\Components\DatePicker
+     * @return DatePicker
      */
-    protected function configureMonthYearDatePicker(Forms\Components\DatePicker $datePicker)
+    protected function configureMonthYearDatePicker(DatePicker $datePicker)
     {
         return $datePicker->format('Y-m');
     }
@@ -22,9 +24,9 @@ trait UsesMonthYearDates
      * Configure table column for month and year format.
      *
      * @param  string  $attribute
-     * @return Tables\Columns\TextColumn
+     * @return TextColumn
      */
-    protected function configureMonthYearTextColumn(Tables\Columns\TextColumn $textColumn, $attribute)
+    protected function configureMonthYearTextColumn(TextColumn $textColumn, $attribute)
     {
         return $textColumn->text(function ($value, $record) use ($attribute) {
             return $record->$attribute ? $record->$attribute->format('Y-m') : '';
@@ -38,7 +40,7 @@ trait UsesMonthYearDates
      * @param  string|null  $value
      * @return void
      */
-    protected function applyMonthYearTableFilter(Tables\Columns\TextColumn $textColumn, $attribute, $value)
+    protected function applyMonthYearTableFilter(TextColumn $textColumn, $attribute, $value)
     {
         $textColumn->filter(function ($query, $search) use ($attribute, $value) {
             if ($value) {

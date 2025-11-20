@@ -2,17 +2,21 @@
 
 namespace App\Filament\Widgets;
 
+use Filament\Actions\Contracts\HasActions;
+use Filament\Actions\Concerns\InteractsWithActions;
+use Exception;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
 
-class BiographySection extends Widget implements HasForms
+class BiographySection extends Widget implements HasForms, HasActions
 {
+    use InteractsWithActions;
     use InteractsWithForms;
 
-    protected static string $view = 'filament.widgets.biography-section';
+    protected string $view = 'filament.widgets.biography-section';
 
     public $biography;
 
@@ -36,7 +40,7 @@ class BiographySection extends Widget implements HasForms
                 ->title('Biography updated successfully')
                 ->success()
                 ->send();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Notification::make()
                 ->title('An error occurred while updating biography')
                 ->body($e->getMessage())

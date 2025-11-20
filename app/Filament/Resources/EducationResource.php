@@ -2,11 +2,26 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Actions\ViewAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use App\Filament\Resources\EducationResource\Pages\ListEducation;
+use App\Filament\Resources\EducationResource\Pages\CreateEducation;
+use App\Filament\Resources\EducationResource\Pages\ViewEducation;
+use App\Filament\Resources\EducationResource\Pages\EditEducation;
 use App\Filament\Resources\EducationResource\Pages;
 use App\Models\Education;
 use App\Support\UsesMonthYearDates;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -19,38 +34,38 @@ class EducationResource extends Resource
 
     protected static ?string $model = Education::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-academic-cap';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('degree')
+        return $schema
+            ->components([
+                TextInput::make('degree')
                     ->autofocus()
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\TextInput::make('course')
+                TextInput::make('course')
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\TextInput::make('field_of_study')
+                TextInput::make('field_of_study')
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\TextInput::make('school')
+                TextInput::make('school')
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\RichEditor::make('description')
+                RichEditor::make('description')
                     ->required()
                     ->minLength(3)
                     ->maxLength(1024 * 5)
                     ->columnSpanFull(),
-                Forms\Components\DatePicker::make('start_date')
+                DatePicker::make('start_date')
                     ->required()
                     ->native(false)
                     ->displayFormat('m/Y'),
-                Forms\Components\DatePicker::make('end_date')
+                DatePicker::make('end_date')
                     ->native(false)
                     ->displayFormat('m/Y'),
             ]);
@@ -62,16 +77,16 @@ class EducationResource extends Resource
             ->columns([
                 // Tables\Columns\TextColumn::make('degree')
                 //     ->searchable(),
-                Tables\Columns\TextColumn::make('course')
+                TextColumn::make('course')
                     ->searchable(),
                 // Tables\Columns\TextColumn::make('field_of_study')
                 //     ->searchable(),
-                Tables\Columns\TextColumn::make('school')
+                TextColumn::make('school')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('start_date')
+                TextColumn::make('start_date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('end_date')
+                TextColumn::make('end_date')
                     ->date()
                     ->sortable(),
                 // Tables\Columns\TextColumn::make('created_at')
@@ -84,17 +99,17 @@ class EducationResource extends Resource
                 //     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Tables\Filters\TrashedFilter::make(),
+                TrashedFilter::make(),
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+            ->recordActions([
+                ViewAction::make(),
+                EditAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ForceDeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
                 ]),
             ]);
     }
@@ -109,10 +124,10 @@ class EducationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEducation::route('/'),
-            'create' => Pages\CreateEducation::route('/create'),
-            'view' => Pages\ViewEducation::route('/{record}'),
-            'edit' => Pages\EditEducation::route('/{record}/edit'),
+            'index' => ListEducation::route('/'),
+            'create' => CreateEducation::route('/create'),
+            'view' => ViewEducation::route('/{record}'),
+            'edit' => EditEducation::route('/{record}/edit'),
         ];
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Support;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
@@ -16,7 +17,7 @@ trait HasMonthYearDates
      */
     protected function setDateAttribute($attribute, $value)
     {
-        $this->attributes[$attribute] = $value ? \Carbon\Carbon::createFromFormat('Y-m', $value)->startOfMonth() : null;
+        $this->attributes[$attribute] = $value ? Carbon::createFromFormat('Y-m', $value)->startOfMonth() : null;
     }
 
     /**
@@ -27,7 +28,7 @@ trait HasMonthYearDates
      */
     protected function getDateAttribute($attribute)
     {
-        return $attribute ? \Carbon\Carbon::parse($attribute)->format('Y-m') : null;
+        return $attribute ? Carbon::parse($attribute)->format('Y-m') : null;
     }
 
     /**

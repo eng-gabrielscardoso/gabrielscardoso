@@ -2,11 +2,27 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Actions\ViewAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use App\Filament\Resources\VolunteeringResource\Pages\ListVolunteerings;
+use App\Filament\Resources\VolunteeringResource\Pages\CreateVolunteering;
+use App\Filament\Resources\VolunteeringResource\Pages\ViewVolunteering;
+use App\Filament\Resources\VolunteeringResource\Pages\EditVolunteering;
 use App\Enums\CauseType;
 use App\Filament\Resources\VolunteeringResource\Pages;
 use App\Models\Volunteering;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -17,32 +33,32 @@ class VolunteeringResource extends Resource
 {
     protected static ?string $model = Volunteering::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-globe-europe-africa';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-globe-europe-africa';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('role')
+        return $schema
+            ->components([
+                TextInput::make('role')
                     ->autofocus()
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\TextInput::make('organisation')
+                TextInput::make('organisation')
                     ->required()
                     ->minLength(3)
                     ->maxLength(255),
-                Forms\Components\Select::make('cause')
+                Select::make('cause')
                     ->required()
                     ->options(CauseType::class),
-                Forms\Components\DatePicker::make('start_date')
+                DatePicker::make('start_date')
                     ->required()
                     ->native(false)
                     ->displayFormat('m/Y'),
-                Forms\Components\DatePicker::make('end_date')
+                DatePicker::make('end_date')
                     ->native(false)
                     ->displayFormat('m/Y'),
-                Forms\Components\RichEditor::make('description')
+                RichEditor::make('description')
                     ->required()
                     ->minLength(3)
                     ->maxLength(1024 * 5)
@@ -54,31 +70,31 @@ class VolunteeringResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('role')
+                TextColumn::make('role')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('organisation')
+                TextColumn::make('organisation')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('cause')
+                TextColumn::make('cause')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('start_date')
+                TextColumn::make('start_date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('end_date')
+                TextColumn::make('end_date')
                     ->date()
                     ->sortable(),
             ])
             ->filters([
-                Tables\Filters\TrashedFilter::make(),
+                TrashedFilter::make(),
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+            ->recordActions([
+                ViewAction::make(),
+                EditAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ForceDeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
                 ]),
             ]);
     }
@@ -93,10 +109,10 @@ class VolunteeringResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListVolunteerings::route('/'),
-            'create' => Pages\CreateVolunteering::route('/create'),
-            'view' => Pages\ViewVolunteering::route('/{record}'),
-            'edit' => Pages\EditVolunteering::route('/{record}/edit'),
+            'index' => ListVolunteerings::route('/'),
+            'create' => CreateVolunteering::route('/create'),
+            'view' => ViewVolunteering::route('/{record}'),
+            'edit' => EditVolunteering::route('/{record}/edit'),
         ];
     }
 
