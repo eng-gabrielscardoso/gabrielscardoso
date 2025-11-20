@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\Project;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -10,7 +11,7 @@ use Livewire\Component;
 class Projects extends Component
 {
     /**
-     * @var \Illuminate\Database\Eloquent\Collection<Project>|null
+     * @var Collection<Project>|null
      */
     public $projects = null;
 

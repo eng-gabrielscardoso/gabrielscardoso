@@ -2,13 +2,14 @@
 
 namespace App\Livewire\Home;
 
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\Education;
 use Livewire\Component;
 
 class Educations extends Component
 {
     /**
-     * @var \Illuminate\Database\Eloquent\Collection<Education>|null
+     * @var Collection<Education>|null
      */
     public $educations = null;
 

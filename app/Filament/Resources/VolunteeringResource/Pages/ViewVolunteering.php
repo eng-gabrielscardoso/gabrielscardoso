@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\VolunteeringResource\Pages;
 
+use Filament\Actions\EditAction;
 use App\Filament\Resources\VolunteeringResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
@@ -13,7 +14,7 @@ class ViewVolunteering extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\EditAction::make(),
+            EditAction::make(),
         ];
     }
 }

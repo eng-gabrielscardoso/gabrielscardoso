@@ -2,10 +2,18 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Actions\ViewAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use App\Filament\Resources\MessageResource\Pages\ListMessages;
+use App\Filament\Resources\MessageResource\Pages\ViewMessage;
 use App\Filament\Resources\MessageResource\Pages;
 use App\Models\Message;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -14,25 +22,25 @@ class MessageResource extends Resource
 {
     protected static ?string $model = Message::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-inbox';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-inbox';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
+        return $schema
+            ->components([
+                TextInput::make('name')
                     ->disabled(),
-                Forms\Components\TextInput::make('email')
+                TextInput::make('email')
                     ->disabled(),
-                Forms\Components\TextInput::make('subject')
+                TextInput::make('subject')
                     ->disabled(),
-                Forms\Components\TextInput::make('message')
+                TextInput::make('message')
                     ->disabled(),
-                Forms\Components\DatePicker::make('next_message_at')
+                DatePicker::make('next_message_at')
                     ->native(false)
                     ->displayFormat('H:i d/m/Y')
                     ->disabled(),
-                Forms\Components\DatePicker::make('created_at')
+                DatePicker::make('created_at')
                     ->native(false)
                     ->displayFormat('H:i d/m/Y')
                     ->disabled(),
@@ -43,19 +51,19 @@ class MessageResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('email')
+                TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('subject')
+                TextColumn::make('subject')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('message')
+                TextColumn::make('message')
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('next_message_at')
+                TextColumn::make('next_message_at')
                     ->dateTime('M j, Y H:i:s', 'America/Belem')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime('M j, Y H:i:s', 'America/Belem')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -64,13 +72,13 @@ class MessageResource extends Resource
             ->filters([
                 //
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
+            ->recordActions([
+                ViewAction::make(),
                 // Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -85,8 +93,8 @@ class MessageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMessages::route('/'),
-            'view' => Pages\ViewMessage::route('/{record}'),
+            'index' => ListMessages::route('/'),
+            'view' => ViewMessage::route('/{record}'),
         ];
     }
 }

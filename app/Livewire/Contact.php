@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Exception;
 use App\Models\Message;
 use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\Title;
@@ -51,7 +52,7 @@ class Contact extends Component
             ]);
 
             Toaster::success('Message sent successfully!');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error($e->getMessage());
             Toaster::error('Some error occurred during message sending. Try again later.');
         } finally {
