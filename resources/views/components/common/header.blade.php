@@ -1,7 +1,7 @@
 <div class="fixed z-50 shadow-md navbar bg-base-100 rounded-b-md">
     <div class="navbar-start">
         <div class="dropdown">
-            <button role="button" class="cursor-pointer btn btn-ghost btn-circle" aria-label="Header Options Button" title="Header Options Button">
+            <button tabindex="0" role="button" class="cursor-pointer btn btn-ghost btn-circle" aria-label="Header Options Button" title="Header Options Button">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <ul tabindex="0" class="p-2 mt-3 shadow-sm menu menu-sm dropdown-content z-1 bg-base-100 rounded-box w-52">
