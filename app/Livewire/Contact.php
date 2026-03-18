@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Exception;
 use App\Models\Message;
+use Exception;
 use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;

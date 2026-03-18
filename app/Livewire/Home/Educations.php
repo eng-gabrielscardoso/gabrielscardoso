@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Home;
 
-use Illuminate\Database\Eloquent\Collection;
 use App\Models\Education;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
 class Educations extends Component

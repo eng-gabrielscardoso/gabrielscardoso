@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources\ExperienceResource\Pages;
 
-use Filament\Actions\EditAction;
 use App\Filament\Resources\ExperienceResource;
-use Filament\Actions;
+use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewExperience extends ViewRecord

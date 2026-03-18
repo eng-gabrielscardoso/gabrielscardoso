@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources\EducationResource\Pages;
 
-use Filament\Actions\EditAction;
 use App\Filament\Resources\EducationResource;
-use Filament\Actions;
+use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewEducation extends ViewRecord

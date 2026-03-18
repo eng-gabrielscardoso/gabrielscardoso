@@ -2,12 +2,11 @@
 
 namespace App\Filament\Resources\VolunteeringResource\Pages;
 
-use Filament\Actions\ViewAction;
+use App\Filament\Resources\VolunteeringResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\RestoreAction;
-use App\Filament\Resources\VolunteeringResource;
-use Filament\Actions;
+use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditVolunteering extends EditRecord
