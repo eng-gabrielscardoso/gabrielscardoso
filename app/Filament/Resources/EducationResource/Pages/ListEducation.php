@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources\EducationResource\Pages;
 
-use Filament\Actions\CreateAction;
 use App\Filament\Resources\EducationResource;
-use Filament\Actions;
+use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
 class ListEducation extends ListRecords

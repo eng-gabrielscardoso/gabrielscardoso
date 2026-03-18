@@ -2,25 +2,22 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\TrashedFilter;
-use Filament\Actions\ViewAction;
-use Filament\Actions\EditAction;
+use App\Filament\Resources\SkillResource\Pages\CreateSkill;
+use App\Filament\Resources\SkillResource\Pages\EditSkill;
+use App\Filament\Resources\SkillResource\Pages\ListSkills;
+use App\Filament\Resources\SkillResource\Pages\ViewSkill;
+use App\Models\Skill;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
-use App\Filament\Resources\SkillResource\Pages\ListSkills;
-use App\Filament\Resources\SkillResource\Pages\CreateSkill;
-use App\Filament\Resources\SkillResource\Pages\ViewSkill;
-use App\Filament\Resources\SkillResource\Pages\EditSkill;
-use App\Filament\Resources\SkillResource\Pages;
-use App\Models\Skill;
-use Filament\Forms;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -29,7 +26,7 @@ class SkillResource extends Resource
 {
     protected static ?string $model = Skill::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-sparkles';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-sparkles';
 
     public static function form(Schema $schema): Schema
     {

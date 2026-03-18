@@ -2,29 +2,26 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\RichEditor;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\TrashedFilter;
-use Filament\Actions\ViewAction;
-use Filament\Actions\EditAction;
+use App\Enums\CauseType;
+use App\Filament\Resources\VolunteeringResource\Pages\CreateVolunteering;
+use App\Filament\Resources\VolunteeringResource\Pages\EditVolunteering;
+use App\Filament\Resources\VolunteeringResource\Pages\ListVolunteerings;
+use App\Filament\Resources\VolunteeringResource\Pages\ViewVolunteering;
+use App\Models\Volunteering;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
-use App\Filament\Resources\VolunteeringResource\Pages\ListVolunteerings;
-use App\Filament\Resources\VolunteeringResource\Pages\CreateVolunteering;
-use App\Filament\Resources\VolunteeringResource\Pages\ViewVolunteering;
-use App\Filament\Resources\VolunteeringResource\Pages\EditVolunteering;
-use App\Enums\CauseType;
-use App\Filament\Resources\VolunteeringResource\Pages;
-use App\Models\Volunteering;
-use Filament\Forms;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -33,7 +30,7 @@ class VolunteeringResource extends Resource
 {
     protected static ?string $model = Volunteering::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-globe-europe-africa';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-globe-europe-africa';
 
     public static function form(Schema $schema): Schema
     {

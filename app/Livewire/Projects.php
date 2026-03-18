@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Illuminate\Database\Eloquent\Collection;
 use App\Models\Project;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 

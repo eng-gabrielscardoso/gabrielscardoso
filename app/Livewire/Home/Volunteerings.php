@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Home;
 
-use Illuminate\Database\Eloquent\Collection;
 use App\Models\Volunteering;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
 class Volunteerings extends Component

@@ -4,8 +4,6 @@ namespace App\Support;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms;
-use Filament\Tables;
 use Illuminate\Support\Facades\DB;
 
 trait UsesMonthYearDates

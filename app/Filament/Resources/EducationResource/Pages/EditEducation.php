@@ -2,12 +2,11 @@
 
 namespace App\Filament\Resources\EducationResource\Pages;
 
-use Filament\Actions\ViewAction;
+use App\Filament\Resources\EducationResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\RestoreAction;
-use App\Filament\Resources\EducationResource;
-use Filament\Actions;
+use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditEducation extends EditRecord

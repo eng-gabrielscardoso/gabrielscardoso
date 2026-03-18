@@ -2,30 +2,27 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\DatePicker;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\TrashedFilter;
-use Filament\Actions\ViewAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\ForceDeleteBulkAction;
-use Filament\Actions\RestoreBulkAction;
-use App\Filament\Resources\ExperienceResource\Pages\ListExperiences;
-use App\Filament\Resources\ExperienceResource\Pages\CreateExperience;
-use App\Filament\Resources\ExperienceResource\Pages\ViewExperience;
-use App\Filament\Resources\ExperienceResource\Pages\EditExperience;
 use App\Enums\EmploymentType;
-use App\Filament\Resources\ExperienceResource\Pages;
+use App\Filament\Resources\ExperienceResource\Pages\CreateExperience;
+use App\Filament\Resources\ExperienceResource\Pages\EditExperience;
+use App\Filament\Resources\ExperienceResource\Pages\ListExperiences;
+use App\Filament\Resources\ExperienceResource\Pages\ViewExperience;
 use App\Models\Experience;
 use App\Support\UsesMonthYearDates;
-use Filament\Forms;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -36,7 +33,7 @@ class ExperienceResource extends Resource
 
     protected static ?string $model = Experience::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-briefcase';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-briefcase';
 
     public static function form(Schema $schema): Schema
     {

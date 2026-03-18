@@ -2,8 +2,8 @@
 
 namespace App\Filament\Widgets;
 
-use Exception;
 use App\Services\SitemapGenerator;
+use Exception;
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Log;

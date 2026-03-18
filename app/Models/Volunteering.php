@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Database\Factories\VolunteeringFactory;
 use App\Enums\CauseType;
+use Database\Factories\VolunteeringFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
