@@ -24,7 +24,7 @@ class SecurityHeaders
             $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
             $response->headers->set('Permissions-Policy', 'geolocation=(), microphone=()');
             $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-            $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
+            // $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
 
             $csp = "default-src 'self'; ".
                 "script-src 'self' blob: 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms https://*.fontawesome.com; ".
