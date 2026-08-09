@@ -12,7 +12,7 @@
             <br>
             I'm <span class="text-primary">Gabe</span>
             <br>
-            Full Stack Developer.
+            Software Engineer.
         </h1>
         <p>
             Currently located at <span class="text-primary">Brazil</span>, I love build software experiences for web.

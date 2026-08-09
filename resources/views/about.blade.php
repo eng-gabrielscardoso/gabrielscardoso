@@ -21,7 +21,7 @@
                     class="text-secondary"><code>File: Gabe.info, Node: Invoking find, Next: Invoking locate, Up: Reference</code></pre>
                 <pre class="text-secondary"><code>1.1 Invoking 'Gabe'</code></pre>
                 <pre class="text-secondary"><code>===================</code></pre>
-                <pre class="text-secondary"><code>'Gabe', Full Stack Developer, located in Brazil.</code></pre>
+                <pre class="text-secondary"><code>'Gabe', Software Engineer, located in Brazil.</code></pre>
                 <pre
                     class="text-secondary"><code>Interests: AI, Blockchain, Web3 and disruptive technologies.</code></pre>
             </div>
