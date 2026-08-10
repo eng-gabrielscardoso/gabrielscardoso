@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use App\Enums\EmploymentType;
+use App\Models\Experience;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Experience>
+ * @extends Factory<Experience>
  */
 class ExperienceFactory extends Factory
 {

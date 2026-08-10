@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Education;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Education>
+ * @extends Factory<Education>
  */
 class EducationFactory extends Factory
 {
